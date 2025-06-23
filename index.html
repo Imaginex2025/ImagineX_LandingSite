@@ -321,13 +321,13 @@
 
 <body>
   <!-- ====== Header Start ====== -->
-<header class="main-header">
-  <div class="container">
-    <div class="header-inner">
+<header class=" py-2 px-3 justify-content-between d-flex align-center">
+
+    
 
       <!-- Logo -->
       <a href="index.html" class="logo">
-        <img src="assets/images/logo/logoo.png" alt="ImagineX Logo" height="70px" />
+        <img src="assets/images/logo/logoo.png" alt="ImagineX Logo" height="50px" />
       </a>
 
       <!-- Hamburger Toggle Button -->
@@ -339,7 +339,7 @@
 
       <!-- Navigation Menu -->
       <ul id="nav" class="nav-menu">
-        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="#about" class="nav-link">About Us</a></li>
         <li><a href="#training" class="nav-link">Training</a></li>
 
@@ -350,15 +350,15 @@
           </a>
           <div id="dropdownMenu" class="dropdown-content" onmouseleave="showDropdown(false)">
             <a href="Consult.html" class="dropdown-item">Patent Tech Consulting</a>
-            <a href="#core-objectives-innovation" class="dropdown-item">Infringement Analysis & Enforcement</a>
-            <a href="#homee" class="dropdown-item">Patent Insights & Analytics</a>
-            <a href="#homee" class="dropdown-item">Patent Monetization & Licensing</a>
+            <a href="Infringement.html" class="dropdown-item">Infringement Analysis & Enforcement</a>
+            <a href="PatentSearch.html" class="dropdown-item">Patent Insights & Analytics</a>
+            <a href="Monetization.html" class="dropdown-item">Patent Monetization & Licensing</a>
           </div>
         </li>
 
         <li><a href="#contact" class="nav-link">Contact Us</a></li>
       </ul>
-    </div>
+
   </div>
 
   <!-- Mobile Menu -->
@@ -369,11 +369,12 @@
     <a href="core-objectives.html" class="mobile-link">Services</a>
     <div class="dropdown-mobile">
       <a href="Consult.html" class="mobile-sublink">Patent Tech Consulting</a>
-      <a href="#core-objectives-innovation" class="mobile-sublink">Innovation & Product Development</a>
-      <a href="#homee" class="mobile-sublink">Training & Enablement</a>
+       <a href="Infringement.html" class="mobile-sublink">Infringement Analysis & Enforcement</a>
+      <a href="PatentSearch.html" class="mobile-sublink">Patent Insights & Analytics</a>
+      <a href="Monetization.html" class="mobile-sublink">Patent Monetization & Licensing</a>
     </div>
     <a href="#contact" class="mobile-link">Contact Us</a>
-  </div>
+
 </header>
 
 <Style>
@@ -590,6 +591,124 @@ function handleDropdownClick(event) {
 
   </style>
 
+    
+
+    <script>
+        // Add smooth scrolling and interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate stats on scroll
+            const observerOptions = {
+                threshold: 0.5,
+                once: true
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const statNumbers = entry.target.querySelectorAll('.stat-number');
+                        statNumbers.forEach(stat => {
+                            const finalNumber = stat.textContent;
+                            stat.textContent = '0';
+                            
+                            const increment = () => {
+                                const current = parseInt(stat.textContent.replace(/[^\d]/g, ''));
+                                const target = parseInt(finalNumber.replace(/[^\d]/g, ''));
+                                const step = target / 50;
+                                
+                                if (current < target) {
+                                    stat.textContent = Math.ceil(current + step) + finalNumber.replace(/\d/g, '');
+                                    setTimeout(increment, 30);
+                                } else {
+                                    stat.textContent = finalNumber;
+                                }
+                            };
+                            
+                            setTimeout(increment, 200);
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            const statsSection = document.querySelector('.stats-section');
+            if (statsSection) {
+                observer.observe(statsSection);
+            }
+
+            // Add hover effects to service cards
+            const serviceCards = document.querySelectorAll('.service-card');
+            serviceCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+        });
+    </script>
+  <!-- ====== Hero End ====== -->
+
+  <!-- ====== About Start ====== -->
+  <!-- ====== Hero Start ====== -->
+  <style>
+
+      .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); }
+            100% { transform: translateY(-100px) rotate(360deg); }
+        }
+
+    .carousel-wrapper {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+            .hero-section {
+            background: linear-gradient(135deg, #000000 0%, #2c3e50 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+            height: 500px;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+  </style>
+
     <section class="hero-section">
         <div class="floating-elements">
             <i class="fas fa-lightbulb floating-element" style="left: 10%; animation-delay: 0s; font-size: 30px;"></i>
@@ -603,8 +722,8 @@ function handleDropdownClick(event) {
                    <div> <h1 class="display-3 fw-bold mb-4 text-white">Welcome to ImagineX</h1></div>
                    <div> <p class="lead mb-4">Unlock the power of intellectual property intelligence with comprehensive analytics, competitive insights, and strategic guidance for your innovation journey.</p>
                     <div class="d-flex justify-content-center gap-4 ">
-                      <button style="padding: 16px 20px; border: 1px solid #fff; background-color:transparent;color: white;font-size: 16px; border-radius: 12px;">Contact Us</button>
-                      <button  style="padding: 16px 20px;background-color: #0d6efd;color: white;font-size: 16px;border-radius: 12px; border: 1px solid #0d6efd;">Know More</button>
+                      <a href="#contact"><button style="padding: 16px 20px; border: 1px solid #fff; background-color:transparent;color: white;font-size: 16px; border-radius: 12px;">Contact Us</button></a>
+                      <a href="#about"><button  style="padding: 16px 20px;background-color: #0d6efd;color: white;font-size: 16px;border-radius: 12px; border: 1px solid #0d6efd;">Know More</button></a>
                     </div>
                 </div>
             </div>
@@ -714,9 +833,7 @@ function handleDropdownClick(event) {
             <div>
               <span class="section-tag">Our Mission</span>
               <div class="d-flex ">
-                <h2>Empower Humanity through <div class="new">
-                    <h2>Innovation</h2>
-                  </div>
+                <h2>Empower Humanity through <span style="background-color: #0d6efd; color: white; padding: 0 10px; font-size: 60px;border-radius: 1px;">Innovation</span>
                 </h2>
               </div>
 
@@ -787,7 +904,7 @@ function handleDropdownClick(event) {
         <div class="col-lg-12">
           <div class="hero-style-content wow fadeInUp" data-wow-delay=".2s">
             <span class="section-tag">Technology Training & Enablement</span>
-            <h1 class="section-title">Empowering the Innovators of Tomorrow</h1>
+            <h1 class="section-title">Empowering the <span style="background-color: #0d6efd; color: white; padding: 0 10px;">Innovators of Tomorrow</span></h1>
             <p class="section-desc">
               We believe the future belongs to those who are prepared to build it. Our training programs include:
             </p>
@@ -835,7 +952,7 @@ function handleDropdownClick(event) {
         <div class="col-lg-12">
           <div class="hero-style-content wow fadeInUp" data-wow-delay=".2s">
             <span class="section-tag">Patent Tech Consulting</span>
-            <h1 class="section-title">Unlock the Full Potential of Your Intellectual Property</h1>
+            <h1 class="section-title">Unlock the Full Potential of<br><span style="background-color: #0d6efd; color: white; padding: 0 10px; font-size: 50px;border-radius: 1px;"> Your Intellectual Propertys</span></h1>
             <p class="section-desc">
               We help clients uncover, develop, and monetize their intellectual property through our industry-leading
               framework. ImagineX is a pioneering AI-native innovation consultancy, committed to transforming how
@@ -908,21 +1025,21 @@ function handleDropdownClick(event) {
     </div>
   </section>
   <!-- Innovation & Product Development -->
-  <section id="core-objectives-innovation" class="ud-features">
+  <section id="core-objectives-innovation" style="padding-bottom: 50px;" class="ud-features">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
           <div class="hero-style-content wow fadeInUp" data-wow-delay=".2s">
             <span class="section-tag">Innovation & Product Development</span>
-            <h1 class="section-title">From Vision to Victory</h1>
+            <h1 class="section-title">From Vision to<span style="background-color: #0d6efd; color: white; padding: 0 10px; font-size: 50px;border-radius: 1px;"> Victory</span></h1>
             <p class="section-desc">
               We convert patented ideas and emerging concepts into real-world solutions.
             </p>
           </div>
         </div>
       </div>
-      <div class="row two-card-row">
-        <div class="col-xl-4 col-lg-4 col-sm-6">
+      <div class="d-flex gap-3">
+        <div class="w-100">
           <div class="mud-card wow fadeInUp" data-wow-delay=".1s">
             <i class="mud-card-icon lni lni-cog"></i>
             <h3 class="mud-card-title">Extended Patent Seeding Development</h3>
@@ -931,7 +1048,7 @@ function handleDropdownClick(event) {
             </p>
           </div>
         </div>
-        <div class="col-xl-4 col-lg-4 col-sm-6">
+        <div class="w-100">
           <div class="mud-card wow fadeInUp" data-wow-delay=".15s">
             <i class="mud-card-icon lni lni-code"></i>
             <h3 class="mud-card-title">AI & IT Services</h3>
@@ -940,12 +1057,9 @@ function handleDropdownClick(event) {
             </p>
           </div>
         </div>
-      </div>
-  </section>
-  <!-- Venture Studio -->
-  <section id="core-objectives-venture" class="ud-features">
-    <div class="row two-card-row">
-      <div class="col-xl-4 col-lg-4 col-sm-6">
+
+       
+        <div class="w-100">
         <div class="mud-card wow fadeInUp" data-wow-delay=".1s">
           <i class="mud-card-icon lni lni-rocket"></i>
           <h3 class="mud-card-title">Creation of ImagineX SPVs</h3>
@@ -954,7 +1068,7 @@ function handleDropdownClick(event) {
           </p>
         </div>
       </div>
-      <div class="col-xl-4 col-lg-4 col-sm-6">
+        <div class="w-100">
         <div class="mud-card wow fadeInUp" data-wow-delay=".15s">
           <i class="mud-card-icon lni lni-users"></i>
           <h3 class="mud-card-title">Student-Led Startups</h3>
@@ -963,8 +1077,9 @@ function handleDropdownClick(event) {
           </p>
         </div>
       </div>
-    </div>
+
   </section>
+  <!-- Venture Studio -->
   <!-- ====== Core Objectives End ====== -->
 
   <!-- ====== Contact Start ====== -->
@@ -983,23 +1098,24 @@ function handleDropdownClick(event) {
             <div class="ud-contact-info-wrapper">
               <div class="ud-single-info">
                 <div class="ud-info-icon">
-                  <i class="lni lni-map-marker"></i>
-                </div>
-                <div class="ud-info-meta">
-                  <h5>Our Location</h5>
-                  <p>THE ImagineX, 123 Innovation Drive, Tech City, USA</p>
-                </div>
-              </div>
-              <div class="ud-single-info">
-                <div class="ud-info-icon">
                   <i class="lni lni-envelope"></i>
                 </div>
                 <div class="ud-info-meta">
                   <h5>How Can We Help?</h5>
-                  <p>info@imaginex.com</p>
-                  <p>+1-800-IMAGINE</p>
+                  <p>info@theimaginex.com</p>
+                  
                 </div>
               </div>
+              <div class="ud-single-info">
+                <div class="ud-info-icon">
+                  <i class="lni lni-linkedin-original"></i>
+                </div>
+                <div class="ud-info-meta">
+                  <h5>Our linkedin</h5>
+                  <a href="https://www.linkedin.com/company/theimaginex/">ImagineX Linkedin </a>
+                </div>
+              </div>
+              
             </div>
           </div>
         </div>
@@ -1017,7 +1133,7 @@ function handleDropdownClick(event) {
               </div>
               <div class="ud-form-group">
                 <label for="phone">Phone*</label>
-                <input type="text" name="phone" placeholder="+1 123 456 7890" />
+                <input type="text" name="phone" placeholder="Type Your Number" />
               </div>
               <div class="ud-form-group">
                 <label for="message">Message*</label>
@@ -1037,16 +1153,8 @@ function handleDropdownClick(event) {
   <!-- ====== Contact End ====== -->
 
   <!-- ====== Footer Start ====== -->
-  <footer class="ud-footer wow fadeInUp" data-wow-delay=".15s">
-    <div class="shape shape-1">
-      <img src="assets/images/footer/shape-1.svg" alt="shape" />
-    </div>
-    <div class="shape shape-2">
-      <img src="assets/images/footer/shape-2.svg" alt="shape" />
-    </div>
-    <div class="shape shape-3">
-      <img src="assets/images/footer/shape-3.svg" alt="shape" />
-    </div>
+  <footer id="footer" class="ud-footer wow fadeInUp" data-wow-delay=".15s">
+    
     <div class="ud-footer-widgets">
       <div class="container">
         <div class="row">
@@ -1060,18 +1168,14 @@ function handleDropdownClick(event) {
                 serves humanity.
               </p>
               <ul class="ud-widget-socials">
+                
                 <li>
-                  <a href="https://facebook.com/imaginex">
-                    <i class="lni lni-facebook-filled"></i>
+                  <a href="www.theimaginex.com">
+                    <i class="lni lni-website-filled"></i>
                   </a>
                 </li>
                 <li>
-                  <a href="https://twitter.com/imaginex">
-                    <i class="lni lni-twitter-filled"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://linkedin.com/company/imaginex">
+                  <a href="https://www.linkedin.com/company/theimaginex/">
                     <i class="lni lni-linkedin-original"></i>
                   </a>
                 </li>
@@ -1090,7 +1194,7 @@ function handleDropdownClick(event) {
                   <a href="#about">About</a>
                 </li>
                 <li>
-                  <a href="#core-objectives-patent">Core Objectives</a>
+                  <a href="#core-objectives-patent">Services</a>
                 </li>
                 <li>
                   <a href="#contact">Contact</a>
@@ -1103,7 +1207,16 @@ function handleDropdownClick(event) {
               <h5 class="ud-widget-title">Services</h5>
               <ul class="ud-widget-links">
                 <li>
-                  <a href="#training">Training</a>
+                  <a href="Consult.html">Patent Tech and Consulting</a>
+                </li>
+                <li>
+                  <a href="Infringement.html">Infringement Analysis and Enforcement</a>
+                </li>
+                <li>
+                  <a href="PatentSearch.html">Patent Insights and Analytics</a>
+                </li>
+                <li>
+                  <a href="Monetization.html">Patent Monetization and Licensing</a>
                 </li>
               </ul>
             </div>
@@ -1112,15 +1225,11 @@ function handleDropdownClick(event) {
             <div class="ud-widget">
               <h5 class="ud-widget-title">Contact Info</h5>
               <ul class="ud-widget-links">
+               
                 <li>
-                  <p> ImagineX, 123 Innovation Drive, Tech City, USA</p>
+                  <p>info@theimaginex.com </p>
                 </li>
-                <li>
-                  <p>info@imaginex.com</p>
-                </li>
-                <li>
-                  <p>+1-800-IMAGINE</p>
-                </li>
+              
               </ul>
             </div>
           </div>
