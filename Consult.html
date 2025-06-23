@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ImagineX - Patent & Innovation Consulting</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"  rel="stylesheet" />
+      <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/animate.css" />
+    <link rel="stylesheet" href="assets/css/lineicons.css" />
+    <link rel="stylesheet" href="assets/css/ud-styles.css" />
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #000000;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Mission Section */
+    .mission-section {
+      background-color: #ffffff;
+      text-align: center;
+      padding: 60px 0;
+    }
+    .mission-section h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #000000;
+    }
+    .mission-section span.highlight {
+      background-color: #0d6efd;
+      color: #ffffff;
+      padding: 8px 18px;
+      border-radius: 5px;
+      display: inline-block;
+      margin-left: 10px;
+    }
+    .mission-section p.subtitle {
+      color: #0d6efd;
+      font-weight: bold;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+    }
+    .mission-section .description {
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    /* Card Styling */
+    .card {
+      border: 2px solid #cccccc;
+      background-color: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    }
+    .card-body {
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* Button styling */
+    .btn-custom {
+      background-color: #0d6efd;
+      color: white;
+      border-radius:12px;
+      padding: 8px 20px;
+      font-size: 0.9rem;
+      width: 200px;
+    }
+    .btn-custom:hover {
+      background-color: #0b5ed7;
+      color: white;
+    }
+
+    /* Icons */
+    .icon {
+      font-size: 2rem;
+      color: #0d6efd;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #000000;
+      color: white;
+      padding: 1.5rem 0;
+    }
+    section{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  </style>
+      <style>
+      /* Section Backgrounds */
+      
+      #about {
+        background-color: #E6F0FA;
+      }
+        #homee {
+        background-color: #E6F0FA;
+      }
+      #training {
+        background-color: #F8F9FA;
+      }
+      #core-objectives-patent {
+        background-color: #D6E4FF;
+      }
+      #core-objectives-innovation {
+        background-color: #FFFFFF;
+      }
+      #core-objectives-venture {
+        background-color: #F8F9FA;
+      }
+      #contact {
+        background-color: #FFFFFF;
+      }
+
+      /* Centered Text for All Headings and Descriptions */
+      .ud-hero-content,
+      .ud-section-title,
+      .ud-section-title span,
+      .ud-section-title h2,
+      .ud-section-title p,
+      .ud-about-content,
+      .ud-about-content span,
+      .ud-about-content h2,
+      .ud-about-content p,
+      .ud-contact-content-wrapper,
+      .ud-contact-title,
+      .ud-contact-title span,
+      .ud-contact-title h2,
+      .ud-contact-info-wrapper,
+      .ud-single-info,
+      .ud-info-meta,
+      .ud-info-meta h5,
+      .ud-info-meta p {
+        text-align: center;
+       
+      }
+
+      /* Hero-style content for sections */
+      .hero-style-content {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+
+      .hero-style-content .section-tag {
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 500;
+        color: #3056D3;
+        background-color: rgba(48, 86, 211, 0.1);
+        border-radius: 30px;
+        padding: 8px 20px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .hero-style-content .section-title {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #212529;
+        margin-bottom: 24px;
+      }
+
+      .hero-style-content .section-desc {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #637381;
+        max-width: 800px;
+        margin: 0 auto 40px;
+      }
+
+      /* Smaller Material Design-Inspired Cards with Uniform Size */
+      .mud-card {
+        background-color: #FFFFFF;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        margin-bottom: 15px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 300px; /* Fixed width for smaller cards */
+        height: 220px; /* Fixed height for uniform size */
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+      }
+      .mud-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+      .mud-card-icon {
+        font-size: 30px;
+        color: #1E90FF;
+        margin-bottom: 10px;
+      }
+      .mud-card-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #333;
+      }
+      .mud-card-desc {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 4; /* Limit to 4 lines */
+        -webkit-box-orient: vertical;
+      }
+
+      /* Responsive adjustments for hero-style titles */
+      @media (max-width: 768px) {
+        .hero-style-content .section-title {
+          font-size: 36px;
+        }
+        .hero-style-content .section-desc {
+          font-size: 16px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .hero-style-content .section-title {
+          font-size: 28px;
+        }
+      }
+    </style>
+</head>
+<body>
+
+    <header class="ud-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <nav class="navbar navbar-expand-lg">
+              <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo/logoo.png" alt="ImagineX Logo" />
+              </a>
+              <button class="navbar-toggler">
+                <span class="toggler-icon"> </span>
+                <span class="toggler-icon"> </span>
+                <span class="toggler-icon"> </span>
+              </button>
+
+              <div class="navbar-collapse">
+                <ul id="nav" class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="#home">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="#about">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="#training">Training</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="#core-objectives-patent">Core Objectives</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="#contact">Contact Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="ud-menu-scroll" href="pricing.html">test</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+  <!-- Mission Section -->
+  <section class="mission-section">
+    <div class="container">
+      <p class="subtitle text-uppercase">OUR MISSION</p>
+      <h2>Empower Humanity Through <span class="highlight">Innovation</span></h2>
+      <p class="description mt-4">
+        THE ImagineX is a True Human Enterprise driven by the vision to Empower Humanity through Innovation and Technology (M-HIT). We transform ideas into patents, patents into products, and innovation into solutions that serve humanity.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+    
+    <!-- Section 1: Patent Tech Consulting -->
+    <section class="mb-5">
+      <h2 class="section-title">1️⃣ PATENT TECH CONSULTING</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="icon">🧠</div>
+              <h5 class="card-title">Patent Gym</h5>
+              <p class="card-text">Uncover hidden IP, enhance valuation, and support long-term growth through structured innovation harvesting.</p>
+              <a href="#" class="btn btn-custom btn-sm">Unlock Your IP Potential</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="icon">🤖</div>
+              <h5 class="card-title">xBrain™</h5>
+              <p class="card-text">AI-powered engine that drives patent discovery, analysis, and strategy development across industries.</p>
+              <a href="#" class="btn btn-custom btn-sm">Discover xBrain™</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="icon">📊</div>
+              <h5 class="card-title">10-Step Patent Framework</h5>
+              <p class="card-text">End-to-end process from idea to filing, including post-grant support and monetization strategies.</p>
+              <a href="#" class="btn btn-custom btn-sm">Start the Process</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="icon">💼</div>
+              <h5 class="card-title">Advanced Patent Services</h5>
+              <p class="card-text">Support for validation, portfolio strategy, global filings, grant acceleration, and more.</p>
+              <a href="#" class="btn btn-custom btn-sm">Explore Services</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="icon">💰</div>
+              <h5 class="card-title">Patent Monetization</h5>
+              <p class="card-text">Leverage the ImagineX Patent Store to turn IP into revenue through licensing or sales.</p>
+              <a href="#" class="btn btn-custom btn-sm">Monetize Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="icon">🎓</div>
+              <h5 class="card-title">Patent Institute</h5>
+              <p class="card-text">Training programs for innovators, researchers, and leaders to build internal IP capabilities.</p>
+              <a href="#" class="btn btn-custom btn-sm">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Innovation & Product Development -->
+    <section class="mb-5">
+      <h2 class="section-title">2️⃣ INNOVATION & PRODUCT DEVELOPMENT </h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="icon">🔬</div>
+              <h5 class="card-title">Extended Patent Seeding</h5>
+              <p class="card-text">From POCs to full production-ready solutions. Turn patented ideas into scalable products.</p>
+              <a href="#" class="btn btn-custom btn-sm">Build Your Next Product</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="icon">💻</div>
+              <h5 class="card-title">AI & IT Services</h5>
+              <p class="card-text">Expertise in Generative AI, cloud, big data, and full-stack product development.</p>
+              <a href="#" class="btn btn-custom btn-sm">Explore AI Solutions</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Venture Studio -->
+    <section class="mb-5">
+      <h2 class="section-title">3️⃣ VENTURE STUDIO</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="icon">🚀</div>
+              <h5 class="card-title">ImagineX SPVs</h5>
+              <p class="card-text">Spin off mature proprietary technologies into independent businesses for commercial success.</p>
+              <a href="#" class="btn btn-custom btn-sm">Launch Your Startup</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="icon">🧑‍🎓</div>
+              <h5 class="card-title">Student-Led Startups</h5>
+              <p class="card-text">Mentorship and incubation for student-led and graduate-founded ventures under the ImagineX umbrella.</p>
+              <a href="#" class="btn btn-custom btn-sm">Apply Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Technology Training -->
+    <section class="mb-5">
+      <h2 class="section-title">4️⃣ TECHNOLOGY TRAINING AND ENABLEMENT</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="icon">🎯</div>
+              <h5 class="card-title">Employment Readiness</h5>
+              <p class="card-text">Prepare students and early-career professionals with job-ready skills for tech roles.</p>
+              <a href="#" class="btn btn-custom btn-sm">Enroll Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="icon">🛠️</div>
+              <h5 class="card-title">AI Product Training</h5>
+              <p class="card-text">Hands-on courses focused on building real-world AI-driven products and solutions.</p>
+              <a href="#" class="btn btn-custom btn-sm">Join AI Program</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100">
+            <div class="card-body">
+              <div class="icon">📜</div>
+              <h5 class="card-title">IP Literacy Programs</h5>
+              <p class="card-text">Educational programs on patent management, protection, and strategic IP usage for institutions and corporates.</p>
+              <a href="#" class="btn btn-custom btn-sm">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+    <footer class="ud-footer wow fadeInUp" data-wow-delay=".15s">
+      <div class="shape shape-1">
+        <img src="assets/images/footer/shape-1.svg" alt="shape" />
+      </div>
+      <div class="shape shape-2">
+        <img src="assets/images/footer/shape-2.svg" alt="shape" />
+      </div>
+      <div class="shape shape-3">
+        <img src="assets/images/footer/shape-3.svg" alt="shape" />
+      </div>
+      <div class="ud-footer-widgets">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6">
+              <div class="ud-widget">
+                <a href="index.html" class="ud-footer-logo">
+                  <img src="assets/images/logo/logoo.png" alt="logo" />
+                </a>
+                <p class="ud-widget-desc">
+                 ImagineX is a True Human Enterprise — where ideas become patents, patents into products, and innovation serves humanity.
+                </p>
+                <ul class="ud-widget-socials">
+                  <li>
+                    <a href="https://facebook.com/imaginex">
+                      <i class="lni lni-facebook-filled"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/imaginex">
+                      <i class="lni lni-twitter-filled"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://linkedin.com/company/imaginex">
+                      <i class="lni lni-linkedin-original"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6">
+              <div class="ud-widget">
+                <h5 class="ud-widget-title">About Us</h5>
+                <ul class="ud-widget-links">
+                  <li>
+                    <a href="#home">Home</a>
+                  </li>
+                  <li>
+                    <a href="#about">About</a>
+                  </li>
+                  <li>
+                    <a href="#core-objectives-patent">Core Objectives</a>
+                  </li>
+                  <li>
+                    <a href="#contact">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6">
+              <div class="ud-widget">
+                <h5 class="ud-widget-title">Services</h5>
+                <ul class="ud-widget-links">
+                  <li>
+                    <a href="#training">Training</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-md-8 col-sm-10">
+              <div class="ud-widget">
+                <h5 class="ud-widget-title">Contact Info</h5>
+                <ul class="ud-widget-links">
+                  <li>
+                    <p> ImagineX, 123 Innovation Drive, Tech City, USA</p>
+                  </li>
+                  <li>
+                    <p>info@imaginex.com</p>
+                  </li>
+                  <li>
+                    <p>+1-800-IMAGINE</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ud-footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8">
+            
+            </div>
+            <div class="col-md-4">
+              <p class="ud-footer-bottom-right">
+                Designed and Developed by ImagineX
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> 
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+      // ==== for menu scroll
+      const pageLink = document.querySelectorAll(".ud-menu-scroll");
+
+      pageLink.forEach((elem) => {
+        elem.addEventListener("click", (e) => {
+          e.preventDefault();
+          document.querySelector(elem.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+            offsetTop: 1 - 60,
+          });
+        });
+      });
+
+      // section menu active
+      function onScroll(event) {
+        const sections = document.querySelectorAll(".ud-menu-scroll");
+        const scrollPos =
+          window.pageYOffset ||
+          document.documentElement.scrollTop ||
+          document.body.scrollTop;
+
+        for (let i = 0; i < sections.length; i++) {
+          const currLink = sections[i];
+          const val = currLink.getAttribute("href");
+          const refElement = document.querySelector(val);
+          const scrollTopMinus = scrollPos + 73;
+          if (
+            refElement.offsetTop <= scrollTopMinus &&
+            refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
+          ) {
+            document
+              .querySelectorAll(".ud-menu-scroll")
+              .forEach(link => link.classList.remove("active"));
+            currLink.classList.add("active");
+          } else {
+            currLink.classList.remove("active");
+          }
+        }
+      }
+
+      window.document.addEventListener("scroll", onScroll);
+    </script>
+</body>
+</html>
