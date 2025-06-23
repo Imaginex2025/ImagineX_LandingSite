@@ -752,6 +752,63 @@ function handleDropdownClick(event) {
 
 <!-- Animation Keyframes Inline -->
 <style>
+  @media (max-width: 768px) {
+  #core-objectives-innovation .container {
+    padding: 0 15px; /* Reduce padding for smaller screens */
+  }
+
+  #core-objectives-innovation .d-flex {
+    flex-direction: column; /* Stack cards vertically */
+    gap: 20px; /* Consistent spacing between cards */
+  }
+
+  #core-objectives-innovation .w-100 {
+    width: 100% !important; /* Ensure full width for cards */
+    max-width: 100%; /* Remove max-width constraints */
+  }
+
+  #core-objectives-innovation .mud-card {
+    max-width: 100%; /* Allow cards to take full width */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px; /* Slightly reduce padding for mobile */
+  }
+
+  #core-objectives-innovation .hero-style-content .section-title {
+    font-size: 28px; /* Reduce title size for mobile */
+    line-height: 1.3;
+  }
+
+  #core-objectives-innovation .hero-style-content .section-desc {
+    font-size: 16px; /* Smaller description text */
+  }
+
+  #core-objectives-innovation .mud-card-title {
+    font-size: 16px; /* Smaller card title */
+  }
+
+  #core-objectives-innovation .mud-card-desc {
+    font-size: 13px; /* Smaller card description */
+  }
+
+  #core-objectives-innovation .mud-card-icon {
+    font-size: 24px; /* Slightly smaller icon */
+  }
+}
+
+@media (max-width: 576px) {
+  #core-objectives-innovation .hero-style-content .section-title {
+    font-size: 24px; /* Further reduce title size for very small screens */
+  }
+
+  #core-objectives-innovation .hero-style-content .section-desc {
+    font-size: 14px; /* Further reduce description text */
+  }
+
+  #core-objectives-innovation .mud-card {
+    padding: 15px; /* Further reduce padding for very small screens */
+  }
+}
+
 @keyframes floaty {
   0% {
     transform: translateY(0) rotate(0deg);
