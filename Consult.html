@@ -43,7 +43,7 @@
       top: 0;
       bottom: 0;
       width: 4px;
-      background: #007bff;
+      background: #751169;
       left: 50%;
       transform: translateX(-50%);
       transition: height 1s ease-out;
@@ -59,7 +59,7 @@
       top: 0;
       left: 50%;
       transform: translateX(-50%);
-      background: #007bff;
+      background: #751169;
       color: #fff;
       width: 40px;
       height: 40px;
@@ -89,15 +89,15 @@
     }
 
     .card-title {
-      color: #007bff;
+      color: #751169;
     }
 
     .timeline-item-left .card {
-      border-right: 4px solid #007bff;
+      border-right: 4px solid #751169;
     }
 
     .timeline-item-right .card {
-      border-left: 4px solid #007bff;
+      border-left: 4px solid #751169;
     }
   </style>
 </head>
@@ -159,6 +159,15 @@
 
 <Style>
   /* Main Header Styles */
+  header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensures header stays above other content */
+  background-color: white; /* Ensures background is visible when scrolling */
+  width: 100%;
+}
 .main-header {
   background-color: white;
   color: black;
@@ -227,7 +236,7 @@
 
 .nav-link:hover,
 .dropdown-link:hover {
-  color: blue;
+  color: #751169;
   text-decoration: underline;
 }
 
@@ -261,7 +270,7 @@
 }
 
 .dropdown-item:hover {
-  color: blue;
+  color: #751169;
   text-decoration: underline;
 }
 
@@ -289,7 +298,7 @@
 
 .mobile-link:hover,
 .mobile-sublink:hover {
-  color: blue;
+  color: #751169;
   text-decoration: underline;
 }
 </Style>

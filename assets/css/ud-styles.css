@@ -15,7 +15,7 @@
   --font: "Inter", sans-serif;
   --body-color: #637381;
   --heading-color: #212b36;
-  --primary-color: #3056d3;
+  --primary-color: #751169;
   --white: #ffffff;
 }
 
@@ -863,7 +863,7 @@ p {
 }
 
 .ud-about-content .ud-main-btn:hover {
-  background: #2748b4;
+  background: #751169;
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
@@ -898,8 +898,8 @@ p {
 }
 
 .ud-single-pricing.active {
-  background: -webkit-gradient(linear, left top, left bottom, from(#3056d3), to(#179bee));
-  background: linear-gradient(180deg, #3056d3 0%, #179bee 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#751169), to(#751169));
+  background: linear-gradient(180deg, #751169 0%, #751169 100%);
   border: none;
   padding: 55px 30px;
 }
@@ -1527,9 +1527,7 @@ p {
   margin-right: 20px;
 }
 
-.ud-widget .ud-widget-socials a:hover {
-  color: var(--primary-color);
-}
+
 
 .ud-widget .ud-widget-title {
   font-weight: 600;
@@ -1547,8 +1545,8 @@ p {
 }
 
 .ud-widget .ud-widget-links a:hover {
-  color: var(--primary-color);
-  padding-left: 10px;
+  text-decoration: underline;
+  
 }
 
 .ud-widget .ud-widget-brands {
@@ -1612,7 +1610,7 @@ p {
 }
 
 .ud-footer-bottom .ud-footer-bottom-left a:hover {
-  color: var(--primary-color);
+  color: skyblue;
 }
 
 .ud-footer-bottom .ud-footer-bottom-right {
@@ -1742,19 +1740,19 @@ p {
 }
 
 .ud-socials-connect ul li a.facebook {
-  background: #4064ac;
+  background: #751169;
 }
 
 .ud-socials-connect ul li a.facebook:hover {
-  background: #315294;
+  background: #751169;
 }
 
 .ud-socials-connect ul li a.twitter {
-  background: #1c9cea;
+  background: #751169;
 }
 
 .ud-socials-connect ul li a.twitter:hover {
-  background: #0f8bd8;
+  background: #751169;
 }
 
 .ud-socials-connect ul li a.google {
@@ -2244,7 +2242,7 @@ p {
 }
 
 .ud-blog-share-links a.facebook {
-  background: #4064ac;
+  background: #751169;
 }
 
 .ud-blog-share-links a.facebook:hover {
@@ -2252,19 +2250,19 @@ p {
 }
 
 .ud-blog-share-links a.twitter {
-  background: #1c9cea;
+  background: #751169;
 }
 
 .ud-blog-share-links a.twitter:hover {
-  background: #0f8bd8;
+  background: #751169;
 }
 
 .ud-blog-share-links a.linkedin {
-  background: #007ab9;
+  background: #751169;
 }
 
 .ud-blog-share-links a.linkedin:hover {
-  background: #03689b;
+  background: #751169;
 }
 
 .ud-blog-sidebar {
