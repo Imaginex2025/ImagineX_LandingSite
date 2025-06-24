@@ -975,6 +975,9 @@ document.querySelectorAll('.mobile-link, .mobile-sublink').forEach(link => {
 
  <!-- vision start  -->
   <Style>
+    .ma-card{
+      width: 33.33%;
+    }
     /* Tablet: 768px to 991px */
 @media (max-width: 991px) {
   .ud-section-title h2 {
@@ -1030,6 +1033,14 @@ document.querySelectorAll('.mobile-link, .mobile-sublink').forEach(link => {
   .ud-card-header i {
     font-size: 18px;
   }
+      .ma-card{
+      
+      width: 100%;
+    }
+
+    .cards{
+      flex-direction: column;
+    }
 }
 
   </Style>
@@ -1055,9 +1066,9 @@ document.querySelectorAll('.mobile-link, .mobile-sublink').forEach(link => {
         </div>
       </div>
 
-      <div class="row mt-5 gap-3">
-        <div class="col-lg-4  col-md-6">
-          <div class="ud-single-card wow fadeInUp" data-wow-delay=".1s">
+      <div class=" cards d-flex gap-2 mt-5 ">
+        <div class="ma-card " >
+          <div class="ud-single-card wow fadeInUp w-100" data-wow-delay=".1s">
             <div class="ud-card-header">
               <h3><i class="fas fa-rocket me-3" style="color: #751169;"></i>Our Impact</h3>
             </div>
@@ -1071,7 +1082,7 @@ document.querySelectorAll('.mobile-link, .mobile-sublink').forEach(link => {
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6">
+        <div class="ma-card" >
           <div class="ud-single-card wow fadeInUp" data-wow-delay=".2s">
             <div class="ud-card-header">
               <h3><i class="fas fa-network-wired me-3" style="color: #751169;"></i>Our Ecosystem</h3>
@@ -1087,7 +1098,7 @@ document.querySelectorAll('.mobile-link, .mobile-sublink').forEach(link => {
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-12">
+        <div class="ma-card" >
           <div class="ud-single-card wow fadeInUp" data-wow-delay=".3s">
             <div class="ud-card-header">
               <h3><i class="fas fa-solid fa-circle-check  me-3" style="color:#751169;"></i>Mission</h3>
@@ -1154,7 +1165,7 @@ document.querySelectorAll('.mobile-link, .mobile-sublink').forEach(link => {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20PX;
+
   margin-top: 30px;
 }
 
@@ -1206,6 +1217,9 @@ document.querySelectorAll('.mobile-link, .mobile-sublink').forEach(link => {
     max-width: 100%;
     flex: 0 0 100%;
   }
+  .training-cards{
+    gap: 20px;
+  }
 
   .card-content {
     padding: 20px;
@@ -1231,9 +1245,10 @@ document.querySelectorAll('.mobile-link, .mobile-sublink').forEach(link => {
         width: 100%;
       }
     }
+    
   </style>
 <section class="ud-hero" id="training">
-  <div class="container">
+  <div class="sec-container">
     <div class="row">
       <div class="col-lg-12">
         <div class="hero-style-content wow fadeInUp" data-wow-delay=".2s">
