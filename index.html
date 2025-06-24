@@ -11,33 +11,33 @@
   <!-- Primary Meta Tags -->
   <meta name="title" content="THE ImagineX - Empowering Humanity through Innovation and Technology">
   <meta name="description"
-    content="THE ImagineX is a futuristic innovation and incubation company transforming ideas into patents, patents into products, and innovation into solutions for humanity.">
+    content="ImagineX is a futuristic innovation and incubation company transforming ideas into patents, patents into products, and innovation into solutions for humanity.">
   <meta name="title" content="THE ImagineX - Empowering Humanity through Innovation and Technology">
   <meta name="description"
-    content="THE ImagineX is a futuristic innovation and incubation company transforming ideas into patents, patents into products, and innovation into solutions for humanity.">
+    content="ImagineX is a futuristic innovation and incubation company transforming ideas into patents, patents into products, and innovation into solutions for humanity.">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://THE ImagineX.com/">
+  <meta property="og:url" content="https://theimagineX.com/">
   <meta property="og:title" content="THE ImagineX - Empowering Humanity through Innovation and Technology">
   <meta property="og:description"
     content="THE ImagineX is a futuristic innovation and incubation company transforming ideas into patents, patents into products, and innovation into solutions for humanity.">
-  <meta property="og:image" content="https://THE ImagineX.com/assets/images/hero/hero-image.svg">
+  <meta property="og:image" content="https://theimagineX.com/assets/images/hero/hero-image.svg">
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://THE ImagineX.com/">
-  <meta property="og:title" content="THE THE ImagineX - Empowering Humanity through Innovation and Technology">
+  <meta property="og:url" content="https://theimagineX.com/">
+  <meta property="og:title" content="THE ImagineX - Empowering Humanity through Innovation and Technology">
   <meta property="og:description"
     content="THE ImagineX is a futuristic innovation and incubation company transforming ideas into patents, patents into products, and innovation into solutions for humanity.">
-  <meta property="og:image" content="https://THE ImagineX.com/assets/images/hero/hero-image.svg">
+  <meta property="og:image" content="https://theimagineX.com/assets/images/hero/hero-image.svg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://THE ImagineX.com/">
-  <meta property="twitter:title" content="THE THE ImagineX - Empowering Humanity through Innovation and Technology">
+  <meta property="twitter:url" content="https://theimagineX.com/">
+  <meta property="twitter:title" content="THE ImagineX - Empowering Humanity through Innovation and Technology">
   <meta property="twitter:description"
-    content="THE ImagineX is a futuristic innovation and transforming ideas into patents, patents into products, and innovation into solutions for humanity.">
-  <meta property="twitter:image" content="https://THE ImagineX.com/assets/images/hero/hero-image.svg">
+    content="ImagineX is a futuristic innovation and transforming ideas into patents, patents into products, and innovation into solutions for humanity.">
+  <meta property="twitter:image" content="https://theimagineX.com/assets/images/hero/hero-image.svg">
 
   <!--====== Favicon Icon ======-->
   <link rel="shortcut icon" href="assets/images/logo/logo.2.png" type="image/svg" />
@@ -179,7 +179,11 @@ header {
       color: #751169;
       margin-bottom: 10px;
     }
-
+.ud-section-title span,
+.ud-section-title h2,
+.ud-section-title p {
+  text-transform: none;
+}
     .mud-card-title {
       font-size: 18px;
       font-weight: 600;
@@ -202,7 +206,7 @@ header {
     .equal-spacing-row {
       display: flex;
       justify-content: space-evenly;
-      flex-wrap: wrap;
+     
       gap: 20px;
     }
 
@@ -352,7 +356,7 @@ header {
 
         <!-- Dropdown Menu -->
         <li class="dropdown">
-          <a href="core-objectives.html" class="nav-link dropdown-toggle" onmouseover="showDropdown(true)">
+          <a href="Consult.html" class="nav-link dropdown-toggle" onmouseover="showDropdown(true)">
             Services
           </a>
           <div id="dropdownMenu" class="dropdown-content" onmouseleave="showDropdown(false)">
@@ -659,7 +663,93 @@ function handleDropdownClick(event) {
   <!-- ====== About Start ====== -->
   <!-- ====== Hero Start ====== -->
   <style>
+ #four-pillars {
+      background-color: #F8F9FA;
+      padding: 80px 20px;
+      position: relative;
+      overflow: hidden;
+    }
 
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .pillar-card {
+      background-color: #FFFFFF;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      min-height: 250px;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    .pillar-icon {
+      font-size: 32px;
+      color: #751169;
+      margin-bottom: 15px;
+    }
+
+    .pillar-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    .pillar-desc {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .pillar-number {
+      position: relative;
+      top: -10px;
+      left: -10px;
+      background-color: #751169;
+      color: #FFFFFF;
+      font-size: 20px;
+      font-weight: 700;
+      width: 30px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      #four-pillars {
+        padding: 20px;
+      }
+
+      .pillars-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pillar-card {
+        font-size: 18px;
+      }
+
+      .pillar-desc {
+        font-size: 14px;
+      }
+    }
       .floating-elements {
             position: absolute;
             top: 0;
@@ -716,7 +806,7 @@ function handleDropdownClick(event) {
 
   </style>
 
-    <section style="background: url(../assets/images/banner/Banner.png); color: white; padding: 100px 20px; position: relative; overflow: hidden; min-height: 600px; display: flex; align-items: center;">
+    <section style="background: url(../Landing_page/assets/images/banner/Banner.png); color: white; padding: 100px 20px; position: relative; overflow: hidden; min-height: 600px; display: flex; align-items: center;">
   
   <!-- Floating Decorative Elements -->
   <!-- Floating Decorative Elements -->
@@ -730,9 +820,10 @@ function handleDropdownClick(event) {
   <div style="position: relative; z-index: 2; max-width: 900px; margin: auto; text-align: center; padding: 0 20px;">
     
     <h1 style="font-size: 48px; color: #fff; font-weight: 800; margin-bottom: 20px; line-height: 1.2;">Welcome to THE ImagineX</h1>
+    <h5 style="font-size: 12px; color: silver; font-weight: 800; margin-bottom: 20px; line-height: 0.9; ">True Human Enterprise</h5>
     
     <p style="font-size: 18px; color: #e0e0e0; margin-bottom: 32px; max-width: 700px; margin-left: auto; margin-right: auto;">
-      Empowering innovation through AI-driven patent analytics, strategic IP insights, and future-ready technology solutions.
+   Empowering innovation through AI-driven patent analytics, strategic IP insights, and future-ready technology solutions.
     </p>
 
     <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
@@ -891,13 +982,13 @@ function handleDropdownClick(event) {
             <div>
               <span class="section-tag">Our Vision</span>
               <div class="d-flex ">
-                <h2>Empowering Humanity through Innovation and Technology- (M-HIT)
+                <h2>Empowering Humanity through Innovation and Technology (M-HIT)
                 </h2>
               </div>
 
 
             </div>
-            THE THE ImagineX is a True Human Enterprise driven by the mission to Empowering Humanity through Innovation and
+            ImagineX is a True Human Enterprise driven by the mission of Empowering Humanity through Innovation and
             Technology (M-HIT). We transform ideas into patents, patents into products, and innovation into solutions
             that serve humanity.
             </p>
@@ -913,7 +1004,7 @@ function handleDropdownClick(event) {
             </div>
             <div class="ud-card-body">
               <p>
-                Under the <strong>Patent Gym</strong> initiative, we provide specialized IP services that uncover hidden
+                Under the <strong>Patent Gym™</strong> initiative, we provide specialized IP services that uncover hidden
                 patent opportunities, enhance corporate valuation, and support long-term growth. We also partner with
                 clients to co-develop AI and advanced tech products that align with their innovation goals.
               </p>
@@ -953,6 +1044,68 @@ function handleDropdownClick(event) {
       </div>
     </div>
   </section>
+   <section id="services" class="four-pillars">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="hero-style-content wow fadeInUp" data-wow-delay=".2s">
+            <span class="section-tag">Our Core Pillars</span>
+            <h1 class="section-title">Driving Innovation with Purpose</h1>
+            <p class="section-desc">
+              Discover the four pillars that define THE ImagineX’s mission to empower humanity through innovation and technology.
+              
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar-card wow fadeInUp" data-wow-delay=".1s" onclick="window.location.href='#core-objectives-patent'" style="cursor: pointer;">
+          <div class="pillar-number">1</div>
+          <i class="pillar-icon lni lni-search"></i>
+          <h3 class="pillar-title">Patent Tech Consulting</h3>
+          <p class="pillar-desc">
+            End-to-end, AI-driven IP discovery, drafting, valuation, monetization, and capability building.
+            <a href="#core-objectives-patent"></a>
+          </p>
+        </div>
+        <div class="pillar-card wow fadeInUp" data-wow-delay=".15s" onclick="window.location.href='#core-objectives-innovation'" style="cursor: pointer;">
+          <div class="pillar-number">2</div>
+          <i class="pillar-icon lni lni-bulb"></i>
+          <h3 class="pillar-title">Innovation & Product Development</h3>
+          <p class="pillar-desc">
+            Translating patented ideas and emerging concepts into production-ready, scalable solutions.
+              <a href="#core-objectives-innovation"></a>
+          </p>
+        </div>
+        <div class="pillar-card wow fadeInUp" data-wow-delay=".2s">
+          <div class="pillar-number">3</div>
+          <i class="pillar-icon lni lni-rocket"></i>
+          <h3 class="pillar-title">Venture Studio</h3>
+          <p class="pillar-desc">
+            Spinning out validated concepts as Special Purpose Vehicles (SPVs) and nurturing student-led startups.
+              
+          </p>
+        </div>
+          <div  data-wow-delay=".25s">
+          <div ></div>
+          
+          <h3 class="pillar-title"></h3>
+          <p class="pillar-desc">
+            
+          </p>
+        </div>
+        <div class="pillar-card wow fadeInUp" data-wow-delay=".25s" >
+          <div class="pillar-number">4</div>
+          <i class="pillar-icon lni lni-graduation"></i>
+          <h3 class="pillar-title">Technology Training & Enablement</h3>
+          <p class="pillar-desc">
+            Future-proof training in AI, product engineering, and IP literacy for students, professionals, and CXOs.
+             
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="about" style="padding: 80px 20px; background-color: #f9f9f9; font-family: 'Segoe UI', sans-serif;">
   <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; align-items: center; gap: 40px;">
     
@@ -962,7 +1115,7 @@ function handleDropdownClick(event) {
       <p style="font-size: 20px; color: #34495e; margin-bottom: 24px;"><strong>Build. Patent. Launch. Lead – With THE ImagineX.</strong></p>
       
       <p style="color: #555; line-height: 1.8; margin-bottom: 20px;">
-        THE THE THE ImagineX is a future-focused innovation company driven by the mission to Empowering Humanity through Innovation and Technology (M-HIT). 
+       THE ImagineX is a future-focused innovation company driven by the mission to Empowering Humanity through Innovation and Technology (M-HIT). 
         We help transform ideas into patents, and patents into real-world solutions.
       </p>
 
@@ -975,13 +1128,13 @@ function handleDropdownClick(event) {
 
       <p style="color: #555; line-height: 1.8;">
         We deliver trusted, AI-powered patent and innovation solutions backed by expert teams, proven frameworks like 
-        <em style="color: #b122ee;">xBrain™</em> and <em style="color: #b122ee;">Patent Gym</em>, and a strong track record of IP success and product impact.
+        <em style="color: #b122ee;">xBrain™ AI</em> and <em style="color: #b122ee;">Patent Gym™</em>, and a strong track record of IP success and product impact.
       </p>
     </div>
 
     <!-- Right Side - Image -->
     <div style="flex: 1; min-width: 300px; display: flex; justify-content: center;">
-      <img src="assets/images/Vertical.webp" alt="about-image"
+      <img src="assets/images/diversity.webp" alt="about-image"
            style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
     </div>
 
@@ -990,49 +1143,7 @@ function handleDropdownClick(event) {
   <!-- ====== About End ====== -->
 
   <!-- ====== Training Start ====== -->
- <section class="ud-hero" style="padding-top: 50px; padding-bottom: 50px;" id="training">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="hero-style-content wow fadeInUp" data-wow-delay=".2s">
-            <span class="section-tag">Technology Training & Enablement</span>
-            <h1 class="section-title">Empowering the Innovators of Tomorrow</span></h1>
-            <p class="section-desc">
-              We believe the future belongs to those who are prepared to build it. Our training programs include:
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class=" d-flex  ">
-<div style="width: 100%; max-width: 33.33%; flex: 0 0 33.33%; padding: 0 15px; box-sizing: border-box;">
-  <div style="background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); animation: fadeInUp 1s ease forwards; animation-delay: 0.1s;" data-wow-delay=".25s">
-    <i style="font-size: 24px; color: #751169; margin-bottom: 15px;" class="lni lni-briefcase"></i>
-    <h3 style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;">Employment Readiness Programs</h3>
-    <p style="color: #666; font-size: 14px; margin: 0;">For students and early-career professionals.</p>
-  </div>
-</div>
-        <div class="width: 100%; max-width: 33.33%; flex: 0 0 33.33%; padding: 0 15px; box-sizing: border-box;">
-          <div style="background-color:white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); animation: fadeInUp 1s ease forwards; animation-delay: 0.1s;" data-wow-delay=".15s">
-            <i class="mud-card-icon lni lni-code" style="font-size: 24px; color: #751169; margin-bottom: 15px;"></i>
-            <h3 style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;">AI Product Development Training</h3>
-            <p style="color: #666; font-size: 14px; margin: 0;">
-              Hands-on, innovation-focused.
-            </p>
-          </div>
-        </div>
-<div style="width: 100%; max-width: 46.33%; flex: 0 0 33.33%; padding: 0 15px; box-sizing: border-box;">
-          <div style="background-color:white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); animation: fadeInUp 1s ease forwards; animation-delay: 0.1s;" data-wow-delay="0.2s">
-            <i class="mud-card-icon lni lni-book"></i>
-            <h3 style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;">Patent & IP Literacy Programs</h3>
-            <p style="color: #666; font-size: 14px; margin: 0;">
-              For  institutions, corporates, and individuals.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ====== Training End ====== -->
+ 
 
   <!-- ====== Core Objectives Start ====== -->
   <!-- Patent Tech Consulting -->
@@ -1059,16 +1170,16 @@ function handleDropdownClick(event) {
             <i class="mud-card-icon lni lni-search"></i>
             <h3 class="mud-card-title">Patent Gym – Patent Harvesting & Seeding</h3>
             <p class="mud-card-desc">
-              Identifying hidden IP in existing solutions and creating new innovations (powered by xBrainTM).
+              Identifying hidden IP in existing solutions and creating new innovations (powered by xBrain™ AI).
             </p>
           </div>
         </div>
         <div class="col-xl-4 col-lg-4 col-sm-6">
           <div class="mud-card wow fadeInUp" data-wow-delay=".15s">
             <i class="mud-card-icon lni lni-bulb"></i>
-            <h3 class="mud-card-title">xBrainTM – AI-powered Patent Intelligence Engine</h3>
+            <h3 class="mud-card-title">xBrain™ – AI-powered Patent Intelligence Engine</h3>
             <p class="mud-card-desc">
-              THE ImagineX AI-powered Patent Intelligence Engine for advanced patent discovery and analysis.
+              ImagineX AI-powered Patent Intelligence Engine 
             </p>
           </div>
         </div>
@@ -1102,7 +1213,7 @@ function handleDropdownClick(event) {
             <i class="mud-card-icon lni lni-coin"></i>
             <h3 class="mud-card-title">Patent Monetization</h3>
             <p class="mud-card-desc">
-              Through the THE ImagineX Patent Store.
+              Through the ImagineX Patent Store.
             </p>
           </div>
         </div>
@@ -1152,31 +1263,91 @@ function handleDropdownClick(event) {
           </div>
         </div>
 
-       
-        <div class="w-100">
-        <div class="mud-card wow fadeInUp" data-wow-delay=".1s">
-          <i class="mud-card-icon lni lni-rocket"></i>
-          <h3 class="mud-card-title">Creation of THE ImagineX SPVs</h3>
-          <p class="mud-card-desc">
-            Special Purpose Vehicles to commercialize our IP.
-          </p>
-        </div>
-      </div>
-        <div class="w-100">
-        <div class="mud-card wow fadeInUp" data-wow-delay=".15s">
-          <i class="mud-card-icon lni lni-users"></i>
-          <h3 class="mud-card-title">Student-Led Startups</h3>
-          <p class="mud-card-desc">
-            Incubation of student-led and graduate-founded companies under the THE ImagineX umbrella.
-          </p>
-        </div>
-      </div>
 
   </section>
   <!-- Venture Studio -->
 
   <!-- ====== Core Objectives End ====== -->
+<section class="ud-hero" style="padding-top: 50px; padding-bottom: 50px;" id="training">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="hero-style-content wow fadeInUp" data-wow-delay=".2s">
+            <span class="section-tag">Technology Training & Enablement</span>
+            <h1 class="section-title">Empowering the Innovators of Tomorrow</span></h1>
+            <p class="section-desc">
+              We believe the future belongs to those who are prepared to build it. Our training programs include:
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class=" d-flex  ">
+<div style="width: 100%; max-width: 33.33%; flex: 0 0 33.33%; padding: 0 15px; box-sizing: border-box;">
+  <div style="background-color: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); animation: fadeInUp 1s ease forwards; animation-delay: 0.1s;" data-wow-delay=".25s">
+    <i style="font-size: 24px; color: #751169; margin-bottom: 15px;" class="lni lni-briefcase"></i>
+    <h3 style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;">Employment Readiness Programs</h3>
+    <p style="color: #666; font-size: 14px; margin: 0;">For students and early-career professionals.</p>
+  </div>
+</div>
+        <div class="width: 100%; max-width: 33.33%; flex: 0 0 33.33%; padding: 0 15px; box-sizing: border-box;">
+          <div style="background-color:white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); animation: fadeInUp 1s ease forwards; animation-delay: 0.1s;" data-wow-delay=".15s">
+            <i class="mud-card-icon lni lni-code" style="font-size: 24px; color: #751169; margin-bottom: 15px;"></i>
+            <h3 style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;">AI Product Development Training</h3>
+            <p style="color: #666; font-size: 14px; margin: 0;">
+              Hands-on, innovation-focused.
+            </p>
+          </div>
+        </div>
+<div style="width: 100%; max-width: 46.33%; flex: 0 0 33.33%; padding: 0 15px; box-sizing: border-box;">
+          <div style="background-color:white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); animation: fadeInUp 1s ease forwards; animation-delay: 0.1s;" data-wow-delay="0.2s">
+            <i class="mud-card-icon lni lni-book"></i>
+            <h3 style="font-size: 18px; font-weight: bold; color: #333; margin-bottom: 10px;">Patent & IP Literacy Programs</h3>
+            <p style="color: #666; font-size: 14px; margin: 0;">
+              For  institutions, corporates, and individuals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ====== Training End ====== -->
+   <!--Venture studio start-->
+  <section id="core-objectives-innovation" style="padding-bottom: 50px;" class="ud-features">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="hero-style-content wow fadeInUp" data-wow-delay=".2s">
+            <span class="section-tag">Venture Studio</span>
+            <h1 class="section-title">Transforming Ideas into Impact-Driven Startups</h1>
+            <p class="section-desc">
+             ImagineX acts as a venture studio, nurturing validated concepts into impactful startups through:
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex gap-3">
+        <div class="w-100">
+          <div class="mud-card wow fadeInUp" data-wow-delay=".1s">
+            <i class="mud-card-icon lni lni-rocket"></i>
+            <h3 class="mud-card-title">Creation of ImagineX SPVs</h3>
+            <p class="mud-card-desc">
+           Special Purpose Vehicles to commercialize our intellectual property.
+            </p>
+          </div>
+        </div>
+        <div class="w-100">
+          <div class="mud-card wow fadeInUp" data-wow-delay=".15s">
+            <i class="mud-card-icon lni lni-users"></i>
+            <h3 class="mud-card-title">
+Incubation of Student-Led Startups</h3>
+            <p class="mud-card-desc">
+           Nurturing student-led and graduate-founded companies under the ImagineX umbrella.
+            </p>
+          </div>
+        </div>
 
+
+  </section>
   <!-- ====== Contact Start ====== -->
   <section id="contact" style="padding-top: 50px;" class="ud-contact ">
     <div class="container">
@@ -1288,7 +1459,7 @@ function handleDropdownClick(event) {
                   <a href="#about">About</a>
                 </li>
                 <li>
-                  <a href="#core-objectives-patent">Services</a>
+                  <a href="#core-objectives-patent">Pillars</a>
                 </li>
                 <li>
                   <a href="#contact">Contact</a>
