@@ -328,64 +328,111 @@ header {
 
 <body>
   <!-- ====== Header Start ====== -->
-<header class=" py-2 px-3 justify-content-between d-flex align-center">
 
-    
 
-      <!-- Logo -->
-      <a href="index.html" class="logo">
-        <img src="assets/images/logo/logoo.png" alt="THE ImagineX Logo" height="50px" />
+<header class="main-header py-2 px-3 justify-content-between d-flex align-center">
+  <!-- Logo -->
+  <a href="index.html" class="logo">
+    <img src="assets/images/logo/logoo.png" alt="THE ImagineX Logo" height="50px" />
+  </a>
+
+  <!-- Hamburger Toggle Button -->
+  <button onclick="toggleMobileMenu()" class="hamburger mt-2" id="hamburger">
+   <img src="assets/images/menu.png" alt="Menu" height="50px" />
+  </button>
+
+  <!-- Desktop Navigation Menu -->
+  <ul id="nav" class="nav-menu">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="#about" class="nav-link">About Us</a></li>
+    <li><a href="#training" class="nav-link">Training</a></li>
+
+    <!-- Dropdown Menu -->
+    <li class="dropdown">
+      <a href="core-objectives.html" class="nav-link dropdown-toggle" onmouseover="showDropdown(true)">
+        Services
       </a>
+      <div id="dropdownMenu" class="dropdown-content" onmouseleave="showDropdown(false)">
+        <a href="Consult.html" class="dropdown-item">Patent Tech Consulting</a>
+        <a href="Infringement.html" class="dropdown-item">Infringement Analysis & Enforcement</a>
+        <a href="PatentSearch.html" class="dropdown-item">Patent Insights & Analytics</a>
+        <a href="Monetization.html" class="dropdown-item">Patent Monetization & Licensing</a>
+      </div>
+    </li>
 
-      <!-- Hamburger Toggle Button -->
-      <button onclick="toggleMenu()" class="hamburger">
-        <span></span>
+    <li><a href="#contact" class="nav-link">Contact Us</a></li>
+  </ul>
+
+  <!-- Mobile Side Nav -->
+  <div id="mobileMenu" class="mobile-menu">
+    <div class="mobile-header">
+      <div class="mobile-logo">
+        <span class="brand-name">ImagineX</span>
+      </div>
+      <button class="close-btn" onclick="toggleMobileMenu()">
         <span></span>
         <span></span>
       </button>
-
-      <!-- Navigation Menu -->
-      <ul id="nav" class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About Us</a></li>
-        <li><a href="#training" class="nav-link">Training</a></li>
-
-        <!-- Dropdown Menu -->
-        <li class="dropdown">
-          <a href="core-objectives.html" class="nav-link dropdown-toggle" onmouseover="showDropdown(true)">
-            Services
-          </a>
-          <div id="dropdownMenu" class="dropdown-content" onmouseleave="showDropdown(false)">
-            <a href="Consult.html" class="dropdown-item">Patent Tech Consulting</a>
-            <a href="Infringement.html" class="dropdown-item">Infringement Analysis & Enforcement</a>
-            <a href="PatentSearch.html" class="dropdown-item">Patent Insights & Analytics</a>
-            <a href="Monetization.html" class="dropdown-item">Patent Monetization & Licensing</a>
-          </div>
-        </li>
-
-        <li><a href="#contact" class="nav-link">Contact Us</a></li>
-      </ul>
-
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="mobile-menu">
-    <a href="#home" class="mobile-link">Home</a>
-    <a href="#about" class="mobile-link">About Us</a>
-    <a href="#training" class="mobile-link">Training</a>
-    <a href="core-objectives.html" class="mobile-link">Services</a>
-    <div class="dropdown-mobile">
-      <a href="Consult.html" class="mobile-sublink">Patent Tech Consulting</a>
-       <a href="Infringement.html" class="mobile-sublink">Infringement Analysis & Enforcement</a>
-      <a href="PatentSearch.html" class="mobile-sublink">Patent Insights & Analytics</a>
-      <a href="Monetization.html" class="mobile-sublink">Patent Monetization & Licensing</a>
     </div>
-    <a href="#contact" class="mobile-link">Contact Us</a>
-
+    
+    <nav class="mobile-nav-content">
+      <a href="#home" class="mobile-link">
+        <span class="link-icon">🏠</span>
+        <span class="link-text">Home</span>
+      </a>
+      <a href="#about" class="mobile-link">
+        <span class="link-icon">👥</span>
+        <span class="link-text">About Us</span>
+      </a>
+      <a href="#training" class="mobile-link">
+        <span class="link-icon">🎓</span>
+        <span class="link-text">Training</span>
+      </a>
+      
+      <div class="mobile-services-section">
+        <div class="services-header">
+          <span class="link-icon">⚙️</span>
+          <span class="services-title">Services</span>
+        </div>
+        <div class="dropdown-mobile">
+          <a href="Consult.html" class="mobile-sublink">
+            <span class="sublink-icon">💼</span>
+            <span class="sublink-text">Patent Tech Consulting</span>
+          </a>
+          <a href="Infringement.html" class="mobile-sublink">
+            <span class="sublink-icon">🔍</span>
+            <span class="sublink-text">Infringement Analysis</span>
+          </a>
+          <a href="PatentSearch.html" class="mobile-sublink">
+            <span class="sublink-icon">📊</span>
+            <span class="sublink-text">Patent Insights</span>
+          </a>
+          <a href="Monetization.html" class="mobile-sublink">
+            <span class="sublink-icon">💰</span>
+            <span class="sublink-text">Patent Monetization</span>
+          </a>
+        </div>
+      </div>
+      
+      <a href="#contact" class="mobile-link">
+        <span class="link-icon">📞</span>
+        <span class="link-text">Contact Us</span>
+      </a>
+    </nav>
+    
+    <div class="mobile-footer">
+      <div class="contact-info">
+        <p>Get in touch with us</p>
+        <small>info@imaginex.com</small>
+      </div>
+    </div>
+  </div>
 </header>
 
-<Style>
-  /* Main Header Styles */
+
+
+<style>
+/* General Header Styles */
 .main-header {
   background-color: white;
   color: black;
@@ -393,19 +440,8 @@ header {
   width: 100%;
   height: 90px;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.container {
-  max-width: 1200px;
-
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .logo {
@@ -415,6 +451,7 @@ header {
   color: black;
 }
 
+/* Hamburger */
 .hamburger {
   background: none;
   border: none;
@@ -422,17 +459,14 @@ header {
   display: none;
   height: 30px;
   width: 36px;
-  position: relative;
-  z-index: 1001;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1100;
+  transition: transform 0.3s ease;
 }
 
-.hamburger span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: black;
-  margin: 6px 0;
-  transition: 0.3s;
+.hamburger:hover {
+  transform: scale(1.1);
 }
 
 .nav-menu {
@@ -442,23 +476,22 @@ header {
   margin: 0;
   padding: 0;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .nav-link {
   text-decoration: none;
   color: black;
-  position: relative;
   transition: color 0.3s ease;
+  font-weight: 500;
 }
 
 .nav-link:hover,
-.dropdown-link:hover {
+.dropdown-item:hover {
   color: #751169;
   text-decoration: underline;
 }
 
-/* Dropdown Styles */
+/* Dropdown */
 .dropdown {
   position: relative;
 }
@@ -468,19 +501,21 @@ header {
   top: 100%;
   left: 0;
   background: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  min-width: 200px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  min-width: 250px;
   display: none;
   flex-direction: column;
   z-index: 999;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .dropdown-item {
-  padding: 10px 15px;
+  padding: 12px 20px;
   text-decoration: none;
   color: black;
-  border-bottom: 1px solid #eee;
-  transition: color 0.3s ease;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
 }
 
 .dropdown-item:last-child {
@@ -488,55 +523,310 @@ header {
 }
 
 .dropdown-item:hover {
-  color: #751169;
-  text-decoration: underline;
+  background-color: #f8f9fa;
 }
 
-/* Mobile Menu */
-.mobile-menu {
-  display: none;
-  flex-direction: column;
-  background: white;
-  padding: 1rem;
-  position: absolute;
-  top: 60px;
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1098;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Enhanced Mobile Side Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 320px;
+  background: linear-gradient(135deg, #751169 0%, #a01d78 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1099;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+}
+
+.mobile-menu.active {
   right: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.mobile-link,
-.mobile-sublink {
-  color: black;
+/* Mobile Header */
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.mobile-logo .brand-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Enhanced Close Button */
+.close-btn {
+  background: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.close-btn span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 2px;
+  background: white;
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+.close-btn span:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-btn span:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Mobile Navigation Content */
+.mobile-nav-content {
+  flex: 1;
+  padding: 1rem 0;
+}
+
+.mobile-link {
+  color: white;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  display: block;
-  transition: color 0.3s ease;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+  margin: 0.2rem 0;
 }
 
-.mobile-link:hover,
-.mobile-sublink:hover {
-  color:#751169;
-  text-decoration: underline;
+.mobile-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-left-color: #ffffff;
+  transform: translateX(5px);
 }
-</Style>
+
+.link-icon {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  width: 24px;
+  text-align: center;
+}
+
+.link-text {
+  font-weight: 500;
+}
+
+/* Services Section */
+.mobile-services-section {
+  margin: 0.5rem 0;
+}
+
+.services-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 3px solid #ffffff;
+}
+
+.services-title {
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
+.dropdown-mobile {
+  background: rgba(0, 0, 0, 0.1);
+  margin-left: 1rem;
+  border-radius: 0 0 8px 0;
+}
+
+.mobile-sublink {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border-left: 2px solid transparent;
+}
+
+.mobile-sublink:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-left-color: rgba(255, 255, 255, 0.5);
+  transform: translateX(8px);
+}
+
+.sublink-icon {
+  font-size: 1rem;
+  margin-right: 0.8rem;
+  width: 20px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.sublink-text {
+  font-weight: 400;
+}
+
+/* Mobile Footer */
+.mobile-footer {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.contact-info p {
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+  color: white;
+}
+
+.contact-info small {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  
+  .mobile-menu {
+    width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-menu {
+    width: 100%;
+    right: -100%;
+  }
+}
+
+/* Animation for menu items */
+.mobile-menu.active .mobile-link,
+.mobile-menu.active .mobile-sublink {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: slideInLeft 0.3s ease forwards;
+}
+
+.mobile-menu.active .mobile-link:nth-child(1) { animation-delay: 0.1s; }
+.mobile-menu.active .mobile-link:nth-child(2) { animation-delay: 0.15s; }
+.mobile-menu.active .mobile-link:nth-child(3) { animation-delay: 0.2s; }
+.mobile-menu.active .mobile-services-section { animation-delay: 0.25s; }
+.mobile-menu.active .mobile-link:last-child { animation-delay: 0.3s; }
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+</style>
 
 <script>
-  function showDropdown(show) {
-  const dropdown = document.getElementById("dropdownMenu");
-  dropdown.style.display = show ? "flex" : "none";
+function toggleMobileMenu() {
+  const mobileMenu = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('overlay');
+  const hamburger = document.getElementById('hamburger');
+
+  mobileMenu.classList.toggle('active');
+  overlay.classList.toggle('active');
+
+  if (mobileMenu.classList.contains('active')) {
+    hamburger.style.transform = 'rotate(90deg)';
+  } else {
+    hamburger.style.transform = 'rotate(0deg)';
+  }
 }
 
-// Optional: Handle click on dropdown toggle link
-function handleDropdownClick(event) {
-  // Prevent opening dropdown from navigating when clicking on desktop
-  if (window.innerWidth > 768) {
-    event.preventDefault(); // prevent redirect only on desktop
-    showDropdown(true);
-  }
-  // On mobile, it will still navigate as usual
+function showDropdown(show) {
+  const dropdown = document.getElementById('dropdownMenu');
+  dropdown.style.display = show ? 'flex' : 'none';
 }
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+  const mobileMenu = document.getElementById('mobileMenu');
+  const hamburger = document.getElementById('hamburger');
+  const overlay = document.getElementById('overlay');
+
+  if (!mobileMenu.contains(event.target) &&
+      !hamburger.contains(event.target) &&
+      mobileMenu.classList.contains('active')) {
+    mobileMenu.classList.remove('active');
+    overlay.classList.remove('active');
+    hamburger.style.transform = 'rotate(0deg)';
+  }
+});
+
+// Automatically close side nav when a link is clicked
+document.querySelectorAll('.mobile-link, .mobile-sublink').forEach(link => {
+  link.addEventListener('click', () => {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('overlay');
+    const hamburger = document.getElementById('hamburger');
+
+    mobileMenu.classList.remove('active');
+    overlay.classList.remove('active');
+    hamburger.style.transform = 'rotate(0deg)';
+  });
+});
 </script>
+
+
+
+
   <!-- ====== Header End ====== -->
 
   <!-- ====== Hero Start ====== -->
