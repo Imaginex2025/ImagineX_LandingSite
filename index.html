@@ -332,27 +332,24 @@ header {
 
 <body>
   <!-- ====== Header Start ====== -->
-<header class=" py-2 px-3 justify-content-between d-flex align-center">
 
-    
 
-      <!-- Logo -->
-      <a href="index.html" class="logo">
-        <img src="assets/images/logo/logoo.png" alt="THE ImagineX Logo" height="50px" />
-      </a>
+<header class="main-header py-2 px-3 justify-content-between d-flex align-items-center">
+  <!-- Logo -->
 
-      <!-- Hamburger Toggle Button -->
-      <button onclick="toggleMenu()" class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    <img src="assets/images/logo/logoo.png" alt="THE ImagineX Logo" height="50px" />
 
-      <!-- Navigation Menu -->
-      <ul id="nav" class="nav-menu">
-        <li><a href="index.html" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About Us</a></li>
-        <li><a href="#training" class="nav-link">Training</a></li>
+
+  <!-- Hamburger Toggle Button -->
+  <button onclick="toggleMobileMenu()" class="hamburger mt-2 mx-0" id="hamburger">
+   <img src="assets/images/menu.png" alt="Menu" height="50px" />
+  </button>
+
+  <!-- Desktop Navigation Menu -->
+  <ul id="nav" class="nav-menu">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="#about" class="nav-link">About Us</a></li>
+    <li><a href="#training" class="nav-link">Training</a></li>
 
         <!-- Dropdown Menu -->
         <li class="dropdown">
@@ -367,29 +364,77 @@ header {
           </div>
         </li>
 
-        <li><a href="#contact" class="nav-link">Contact Us</a></li>
-      </ul>
+    <li><a href="#contact" class="nav-link">Contact Us</a></li>
+  </ul>
 
-  </div>
-
-  <!-- Mobile Menu -->
+  <!-- Mobile Side Nav -->
   <div id="mobileMenu" class="mobile-menu">
-    <a href="#home" class="mobile-link">Home</a>
-    <a href="#about" class="mobile-link">About Us</a>
-    <a href="#training" class="mobile-link">Training</a>
-    <a href="core-objectives.html" class="mobile-link">Services</a>
-    <div class="dropdown-mobile">
-      <a href="Consult.html" class="mobile-sublink">Patent Tech Consulting</a>
-       <a href="Infringement.html" class="mobile-sublink">Infringement Analysis & Enforcement</a>
-      <a href="PatentSearch.html" class="mobile-sublink">Patent Insights & Analytics</a>
-      <a href="Monetization.html" class="mobile-sublink">Patent Monetization & Licensing</a>
+    <div class="mobile-header">
+      <div class="mobile-logo">
+        <span class="brand-name">ImagineX</span>
+      </div>
+      <button class="close-btn mx-0" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    <a href="#contact" class="mobile-link">Contact Us</a>
-
+    
+    <nav class="mobile-nav-content">
+      <a href="#home" class="mobile-link">
+        <span class="link-icon">🏠</span>
+        <span class="link-text">Home</span>
+      </a>
+      <a href="#about" class="mobile-link">
+        <span class="link-icon">👥</span>
+        <span class="link-text">About Us</span>
+      </a>
+      <a href="#training" class="mobile-link">
+        <span class="link-icon">🎓</span>
+        <span class="link-text">Training</span>
+      </a>
+      
+      <div class="mobile-services-section">
+        <div class="services-header">
+          <span class="link-icon">⚙️</span>
+          <span class="services-title">Services</span>
+        </div>
+        <div class="dropdown-mobile">
+          <a href="Consult.html" class="mobile-sublink">
+            <span class="sublink-icon">💼</span>
+            <span class="sublink-text">Patent Tech Consulting</span>
+          </a>
+          <a href="Infringement.html" class="mobile-sublink">
+            <span class="sublink-icon">🔍</span>
+            <span class="sublink-text">Infringement Analysis</span>
+          </a>
+          <a href="PatentSearch.html" class="mobile-sublink">
+            <span class="sublink-icon">📊</span>
+            <span class="sublink-text">Patent Insights</span>
+          </a>
+          <a href="Monetization.html" class="mobile-sublink">
+            <span class="sublink-icon">💰</span>
+            <span class="sublink-text">Patent Monetization</span>
+          </a>
+        </div>
+      </div>
+      
+      <a href="#contact" class="mobile-link">
+        <span class="link-icon">📞</span>
+        <span class="link-text">Contact Us</span>
+      </a>
+    </nav>
+    
+    <div class="mobile-footer">
+      <div class="contact-info">
+        <p>Get in touch with us</p>
+        <small>info@imaginex.com</small>
+      </div>
+    </div>
+  </div>
 </header>
 
-<Style>
-  /* Main Header Styles */
+<style>
+/* General Header Styles */
 .main-header {
   background-color: white;
   color: black;
@@ -397,19 +442,8 @@ header {
   width: 100%;
   height: 90px;
   z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.container {
-  max-width: 1200px;
-
-}
-
-.header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
 .logo {
@@ -419,6 +453,7 @@ header {
   color: black;
 }
 
+/* Hamburger */
 .hamburger {
   background: none;
   border: none;
@@ -426,17 +461,14 @@ header {
   display: none;
   height: 30px;
   width: 36px;
-  position: relative;
-  z-index: 1001;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1100;
+  transition: transform 0.3s ease;
 }
 
-.hamburger span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: black;
-  margin: 6px 0;
-  transition: 0.3s;
+.hamburger:hover {
+  transform: scale(1.1);
 }
 
 .nav-menu {
@@ -446,23 +478,22 @@ header {
   margin: 0;
   padding: 0;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .nav-link {
   text-decoration: none;
   color: black;
-  position: relative;
   transition: color 0.3s ease;
+  font-weight: 500;
 }
 
 .nav-link:hover,
-.dropdown-link:hover {
+.dropdown-item:hover {
   color: #751169;
   text-decoration: underline;
 }
 
-/* Dropdown Styles */
+/* Dropdown */
 .dropdown {
   position: relative;
 }
@@ -472,19 +503,21 @@ header {
   top: 100%;
   left: 0;
   background: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  min-width: 200px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  min-width: 250px;
   display: none;
   flex-direction: column;
   z-index: 999;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .dropdown-item {
-  padding: 10px 15px;
+  padding: 12px 20px;
   text-decoration: none;
   color: black;
-  border-bottom: 1px solid #eee;
-  transition: color 0.3s ease;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
 }
 
 .dropdown-item:last-child {
@@ -492,175 +525,311 @@ header {
 }
 
 .dropdown-item:hover {
-  color: #751169;
-  text-decoration: underline;
+  background-color: #f8f9fa;
 }
 
-/* Mobile Menu */
-.mobile-menu {
-  display: none;
-  flex-direction: column;
-  background: white;
-  padding: 1rem;
-  position: absolute;
-  top: 60px;
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1098;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Enhanced Mobile Side Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100vh;
+  width: 320px;
+  background: linear-gradient(135deg, #751169 0%, #a01d78 100%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1099;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+}
+
+.mobile-menu.active {
   right: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.mobile-link,
-.mobile-sublink {
-  color: black;
+/* Mobile Header */
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1.5rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.mobile-logo .brand-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Enhanced Close Button */
+.close-btn {
+  background: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+.close-btn span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 2px;
+  background: white;
+  border-radius: 1px;
+  transition: all 0.3s ease;
+}
+
+.close-btn span:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.close-btn span:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Mobile Navigation Content */
+.mobile-nav-content {
+  flex: 1;
+  padding: 1rem 0;
+}
+
+.mobile-link {
+  color: white;
   text-decoration: none;
-  padding: 0.5rem 1rem;
-  display: block;
-  transition: color 0.3s ease;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+  margin: 0.2rem 0;
 }
 
-.mobile-link:hover,
-.mobile-sublink:hover {
-  color:#751169;
-  text-decoration: underline;
+.mobile-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-left-color: #ffffff;
+  transform: translateX(5px);
 }
-</Style>
+
+.link-icon {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  width: 24px;
+  text-align: center;
+}
+
+.link-text {
+  font-weight: 500;
+}
+
+/* Services Section */
+.mobile-services-section {
+  margin: 0.5rem 0;
+}
+
+.services-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 3px solid #ffffff;
+}
+
+.services-title {
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
+.dropdown-mobile {
+  background: rgba(0, 0, 0, 0.1);
+  margin-left: 1rem;
+  border-radius: 0 0 8px 0;
+}
+
+.mobile-sublink {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border-left: 2px solid transparent;
+}
+
+.mobile-sublink:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-left-color: rgba(255, 255, 255, 0.5);
+  transform: translateX(8px);
+}
+
+.sublink-icon {
+  font-size: 1rem;
+  margin-right: 0.8rem;
+  width: 20px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.sublink-text {
+  font-weight: 400;
+}
+
+/* Mobile Footer */
+.mobile-footer {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.contact-info p {
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+  color: white;
+}
+
+.contact-info small {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+  
+  .mobile-menu {
+    width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-menu {
+    width: 100%;
+    right: -100%;
+  }
+}
+
+/* Animation for menu items */
+.mobile-menu.active .mobile-link,
+.mobile-menu.active .mobile-sublink {
+  opacity: 0;
+  transform: translateX(20px);
+  animation: slideInLeft 0.3s ease forwards;
+}
+
+.mobile-menu.active .mobile-link:nth-child(1) { animation-delay: 0.1s; }
+.mobile-menu.active .mobile-link:nth-child(2) { animation-delay: 0.15s; }
+.mobile-menu.active .mobile-link:nth-child(3) { animation-delay: 0.2s; }
+.mobile-menu.active .mobile-services-section { animation-delay: 0.25s; }
+.mobile-menu.active .mobile-link:last-child { animation-delay: 0.3s; }
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+</style>
 
 <script>
-  function showDropdown(show) {
-  const dropdown = document.getElementById("dropdownMenu");
-  dropdown.style.display = show ? "flex" : "none";
+function toggleMobileMenu() {
+  const mobileMenu = document.getElementById('mobileMenu');
+  const overlay = document.getElementById('overlay');
+  const hamburger = document.getElementById('hamburger');
+  
+  
+
+  mobileMenu.classList.toggle('active');
+  overlay.classList.toggle('active');
+
+  if (mobileMenu.classList.contains('active')) {
+    hamburger.style.transform = 'rotate(90deg)';
+  } else {
+    hamburger.style.transform = 'rotate(0deg)';
+  }
 }
 
-// Optional: Handle click on dropdown toggle link
-function handleDropdownClick(event) {
-  // Prevent opening dropdown from navigating when clicking on desktop
-  if (window.innerWidth > 768) {
-    event.preventDefault(); // prevent redirect only on desktop
-    showDropdown(true);
-  }
-  // On mobile, it will still navigate as usual
+function showDropdown(show) {
+  const dropdown = document.getElementById('dropdownMenu');
+  dropdown.style.display = show ? 'flex' : 'none';
 }
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+  const mobileMenu = document.getElementById('mobileMenu');
+  const hamburger = document.getElementById('hamburger');
+  const overlay = document.getElementById('overlay');
+
+  if (!mobileMenu.contains(event.target) &&
+      !hamburger.contains(event.target) &&
+      mobileMenu.classList.contains('active')) {
+    mobileMenu.classList.remove('active');
+    overlay.classList.remove('active');
+    hamburger.style.transform = 'rotate(0deg)';
+  }
+});
+
+// Automatically close side nav when a link is clicked
+document.querySelectorAll('.mobile-link, .mobile-sublink').forEach(link => {
+  link.addEventListener('click', () => {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('overlay');
+    const hamburger = document.getElementById('hamburger');
+
+    mobileMenu.classList.remove('active');
+    overlay.classList.remove('active');
+    hamburger.style.transform = 'rotate(0deg)';
+  });
+});
 </script>
+
   <!-- ====== Header End ====== -->
 
-  <!-- ====== Hero Start ====== -->
-  <style>
-
-      .floating-elements {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            pointer-events: none;
-            overflow: hidden;
-        }
-
-        .floating-element {
-            position: absolute;
-            opacity: 0.1;
-            animation: float 20s infinite linear;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(100vh) rotate(0deg); }
-            100% { transform: translateY(-100px) rotate(360deg); }
-        }
-
-    .carousel-wrapper {
-      width: 100%;
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: center;
-      padding: 2rem;
-      box-sizing: border-box;
-    }
-            .hero-section {
-            background: linear-gradient(135deg, #000000 0%, #2c3e50 100%);
-            color: white;
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-            height: 500px;
-        }
-
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
-
-  </style>
-
-    
-
-    <script>
-        // Add smooth scrolling and interactive effects
-        document.addEventListener('DOMContentLoaded', function() {
-            // Animate stats on scroll
-            const observerOptions = {
-                threshold: 0.5,
-                once: true
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const statNumbers = entry.target.querySelectorAll('.stat-number');
-                        statNumbers.forEach(stat => {
-                            const finalNumber = stat.textContent;
-                            stat.textContent = '0';
-                            
-                            const increment = () => {
-                                const current = parseInt(stat.textContent.replace(/[^\d]/g, ''));
-                                const target = parseInt(finalNumber.replace(/[^\d]/g, ''));
-                                const step = target / 50;
-                                
-                                if (current < target) {
-                                    stat.textContent = Math.ceil(current + step) + finalNumber.replace(/\d/g, '');
-                                    setTimeout(increment, 30);
-                                } else {
-                                    stat.textContent = finalNumber;
-                                }
-                            };
-                            
-                            setTimeout(increment, 200);
-                        });
-                    }
-                });
-            }, observerOptions);
-
-            const statsSection = document.querySelector('.stats-section');
-            if (statsSection) {
-                observer.observe(statsSection);
-            }
-
-            // Add hover effects to service cards
-            const serviceCards = document.querySelectorAll('.service-card');
-            serviceCards.forEach(card => {
-                card.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateY(-10px) scale(1.02)';
-                });
-                
-                card.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateY(0) scale(1)';
-                });
-            });
-        });
-    </script>
-  <!-- ====== Hero End ====== -->
-
-  <!-- ====== About Start ====== -->
   <!-- ====== Hero Start ====== -->
   <style>
  #four-pillars {
@@ -760,53 +929,61 @@ function handleDropdownClick(event) {
             overflow: hidden;
         }
 
-        .floating-element {
-            position: absolute;
-            opacity: 0.1;
-            animation: float 20s infinite linear;
-        }
+  /* Tablet (max-width: 991px) */
+@media (max-width: 991px) {
+  section {
+    padding: 80px 20px;
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+  }
 
-        @keyframes float {
-            0% { transform: translateY(100vh) rotate(0deg); }
-            100% { transform: translateY(-100px) rotate(360deg); }
-        }
+  section h1 {
+    font-size: 36px;
+  }
 
-    .carousel-wrapper {
-      width: 100%;
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: center;
-      padding: 2rem;
-      box-sizing: border-box;
-    }
-            .hero-section {
-            background: linear-gradient(135deg, #000000 0%, #2c3e50 100%);
-            color: white;
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-            height: 500px;
-        }
+  section p {
+    font-size: 16px;
+  }
 
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
-        }
+  .floating-element {
+    display: none; /* Optional: hide on tablet to declutter */
+  }
+}
 
-        .hero-content {
-            position: relative;
-            z-index: 2;
-        }
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  section {
+    padding: 60px 16px;
+    min-height: 450px;
+  }
 
-  </style>
+  section h1 {
+    font-size: 28px;
+  }
 
-    <section style="background: url(../Landing_page/assets/images/banner/Banner.png); color: white; padding: 100px 20px; position: relative; overflow: hidden; min-height: 600px; display: flex; align-items: center;">
+  section p {
+    font-size: 15px;
+  }
+
+  section div[style*="display: flex"] {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  button {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .floating-element {
+    display: none; /* Hide decorative floaters on mobile */
+  }
+}
+
+</style>
+<section style="background: url(../Landing_page/assets/images/banner/Banner.png); color: white; padding: 100px 20px; position: relative; overflow: hidden; min-height: 600px; display: flex; align-items: center;">
   
   <!-- Floating Decorative Elements -->
   <!-- Floating Decorative Elements -->
@@ -841,82 +1018,7 @@ function handleDropdownClick(event) {
   </div>
 </section>
 
-<!-- Animation Keyframes Inline -->
-<style>
-  @media (max-width: 768px) {
-  #core-objectives-innovation .container {
-    padding: 0 15px; /* Reduce padding for smaller screens */
-  }
-
-  #core-objectives-innovation .d-flex {
-    flex-direction: column; /* Stack cards vertically */
-    gap: 20px; /* Consistent spacing between cards */
-  }
-
-  #core-objectives-innovation .w-100 {
-    width: 100% !important; /* Ensure full width for cards */
-    max-width: 100%; /* Remove max-width constraints */
-  }
-
-  #core-objectives-innovation .mud-card {
-    max-width: 100%; /* Allow cards to take full width */
-    height: auto; /* Allow height to adjust based on content */
-    padding: 20px; /* Slightly reduce padding for mobile */
-  }
-
-  #core-objectives-innovation .hero-style-content .section-title {
-    font-size: 28px; /* Reduce title size for mobile */
-    line-height: 1.3;
-  }
-
-  #core-objectives-innovation .hero-style-content .section-desc {
-    font-size: 16px; /* Smaller description text */
-  }
-
-  #core-objectives-innovation .mud-card-title {
-    font-size: 16px; /* Smaller card title */
-  }
-
-  #core-objectives-innovation .mud-card-desc {
-    font-size: 13px; /* Smaller card description */
-  }
-
-  #core-objectives-innovation .mud-card-icon {
-    font-size: 24px; /* Slightly smaller icon */
-  }
-}
-
-@media (max-width: 576px) {
-  #core-objectives-innovation .hero-style-content .section-title {
-    font-size: 24px; /* Further reduce title size for very small screens */
-  }
-
-  #core-objectives-innovation .hero-style-content .section-desc {
-    font-size: 14px; /* Further reduce description text */
-  }
-
-  #core-objectives-innovation .mud-card {
-    padding: 15px; /* Further reduce padding for very small screens */
-  }
-}
-
-@keyframes floaty {
-  0% {
-    transform: translateY(0) rotate(0deg);
-    opacity: 0.05;
-  }
-  50% {
-    transform: translateY(-50px) rotate(180deg);
-    opacity: 0.1;
-  }
-  100% {
-    transform: translateY(0) rotate(360deg);
-    opacity: 0.05;
-  }
-}
-</style>
-
-    <script>
+<script>
         // Add smooth scrolling and interactive effects
         document.addEventListener('DOMContentLoaded', function() {
             // Animate stats on scroll
@@ -969,11 +1071,81 @@ function handleDropdownClick(event) {
                 });
             });
         });
-    </script>
+</script>
   <!-- ====== Hero End ====== -->
 
-  <!-- ====== About Start ====== -->
- 
+
+ <!-- vision start  -->
+  <Style>
+    .ma-card{
+      width: 33.33%;
+    }
+    /* Tablet: 768px to 991px */
+@media (max-width: 991px) {
+  .ud-section-title h2 {
+    font-size: 26px;
+    line-height: 1.4;
+  }
+
+  .ud-section-title p {
+    font-size: 16px;
+  }
+
+  .ud-single-card {
+    margin-bottom: 30px;
+  }
+
+  .ud-card-header h3 {
+    font-size: 20px;
+  }
+
+  .ud-card-body p {
+    font-size: 15px;
+  }
+}
+
+/* Mobile: 767px and below */
+@media (max-width: 767px) {
+  .ud-section-title {
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .ud-section-title h2 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .ud-section-title p {
+    font-size: 15px;
+  }
+
+  .ud-single-card {
+    margin-bottom: 25px;
+  }
+
+  .ud-card-header h3 {
+    font-size: 18px;
+  }
+
+  .ud-card-body p {
+    font-size: 14px;
+  }
+
+  .ud-card-header i {
+    font-size: 18px;
+  }
+      .ma-card{
+      
+      width: 100%;
+    }
+
+    .cards{
+      flex-direction: column;
+    }
+}
+
+  </Style>
   <section id="mission" class="ud-mission">
     <div class="container">
       <div class="row">
@@ -996,9 +1168,9 @@ function handleDropdownClick(event) {
         </div>
       </div>
 
-      <div class="row mt-5">
-        <div class="col-lg-4 col-md-6">
-          <div class="ud-single-card wow fadeInUp" data-wow-delay=".1s">
+      <div class=" cards d-flex gap-2 mt-5 ">
+        <div class="ma-card " >
+          <div class="ud-single-card wow fadeInUp w-100" data-wow-delay=".1s">
             <div class="ud-card-header">
               <h3><i class="fas fa-rocket me-3" style="color: #751169;"></i>Our Impact</h3>
             </div>
@@ -1012,7 +1184,7 @@ function handleDropdownClick(event) {
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-6">
+        <div class="ma-card" >
           <div class="ud-single-card wow fadeInUp" data-wow-delay=".2s">
             <div class="ud-card-header">
               <h3><i class="fas fa-network-wired me-3" style="color: #751169;"></i>Our Ecosystem</h3>
@@ -1028,7 +1200,7 @@ function handleDropdownClick(event) {
           </div>
         </div>
 
-        <div class="col-lg-4 col-md-12">
+        <div class="ma-card" >
           <div class="ud-single-card wow fadeInUp" data-wow-delay=".3s">
             <div class="ud-card-header">
               <h3><i class="fas fa-solid fa-circle-check  me-3" style="color:#751169;"></i>Mission</h3>
@@ -1143,7 +1315,142 @@ function handleDropdownClick(event) {
   <!-- ====== About End ====== -->
 
   <!-- ====== Training Start ====== -->
- 
+
+  <style>
+    /* Training Section Styles */
+.ud-hero {
+  padding: 50px 0;
+}
+
+.training-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin-top: 30px;
+}
+
+.training-card {
+  width: 100%;
+  max-width: 33.33%;
+  flex: 0 0 33.33%;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.card-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.card-icon {
+  font-size: 24px;
+  color: #751169;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.card-desc {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .training-card {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .training-card {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+  .training-cards{
+    gap: 20px;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card-title {
+    font-size: 16px;
+  }
+
+  .card-desc {
+    font-size: 13px;
+  }
+}
+
+    @media (max-width: 767px){
+      .flexing{
+        flex-direction: column;
+      }
+      .boxing{
+        width: 100%;
+      }
+      .inside-box{
+        width: 100%;
+      }
+    }
+    
+  </style>
+<section class="ud-hero" id="training">
+  <div class="sec-container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="hero-style-content wow fadeInUp" data-wow-delay=".2s">
+          <span class="section-tag">Technology Training & Enablement</span>
+          <h1 class="section-title">Empowering the Innovators of Tomorrow</h1>
+          <p class="section-desc">
+            We believe the future belongs to those who are prepared to build it. Our training programs include:
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex flex-wrap training-cards">
+      <div class="training-card">
+        <div class="card-content" data-wow-delay=".25s">
+          <i class="lni lni-briefcase card-icon"></i>
+          <h3 class="card-title">Employment Readiness Programs</h3>
+          <p class="card-desc">For students and early-career professionals.</p>
+        </div>
+      </div>
+
+      <div class="training-card">
+        <div class="card-content" data-wow-delay=".15s">
+          <i class="lni lni-code card-icon"></i>
+          <h3 class="card-title">AI Product Development Training</h3>
+          <p class="card-desc">Hands-on, innovation-focused.</p>
+        </div>
+      </div>
+
+      <div class="training-card">
+        <div class="card-content" data-wow-delay=".2s">
+          <i class="lni lni-book card-icon"></i>
+          <h3 class="card-title">Patent & IP Literacy Programs</h3>
+          <p class="card-desc">For institutions, corporates, and individuals.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- ====== Training End ====== -->
 
   <!-- ====== Core Objectives Start ====== -->
   <!-- Patent Tech Consulting -->
@@ -1230,38 +1537,145 @@ function handleDropdownClick(event) {
     </div>
   </section>
   <!-- Innovation & Product Development -->
-  <section id="core-objectives-innovation" style="padding-bottom: 50px;" class="ud-features">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="hero-style-content wow fadeInUp" data-wow-delay=".2s">
-            <span class="section-tag">Innovation & Product Development</span>
-            <h1 class="section-title">From Vision to Victory</h1>
-            <p class="section-desc">
-              We convert patented ideas and emerging concepts into real-world solutions.
-            </p>
-          </div>
+   <style>
+    /* Core Objectives Section */
+.ud-features {
+  padding: 50px 0;
+}
+
+.hero-style-content .section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.hero-style-content .section-desc {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.mud-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.mud-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  flex: 1 1 calc(25% - 24px);
+  min-width: 250px;
+  max-width: 100%;
+  box-sizing: border-box;
+  transition: transform 0.3s ease;
+}
+
+.mud-card:hover {
+  transform: translateY(-5px);
+}
+
+.mud-card-icon {
+  font-size: 28px;
+  color: #751169;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.mud-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.mud-card-desc {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+/* Tablet (<= 991px) */
+@media (max-width: 991px) {
+  .mud-card-wrapper {
+    gap: 20px;
+  }
+
+  .mud-card {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .hero-style-content .section-title {
+    font-size: 28px;
+  }
+
+  .hero-style-content .section-desc {
+    font-size: 15px;
+  }
+}
+
+/* Mobile (<= 767px) */
+@media (max-width: 767px) {
+  .mud-card {
+    flex: 1 1 100%;
+  }
+
+  .hero-style-content .section-title {
+    font-size: 24px;
+  }
+
+  .hero-style-content .section-desc {
+    font-size: 14px;
+  }
+
+  .mud-card-title {
+    font-size: 16px;
+  }
+
+  .mud-card-desc {
+    font-size: 13px;
+  }
+
+  .mud-card-icon {
+    font-size: 24px;
+  }
+}
+
+   </style>
+<section id="core-objectives-innovation" class="ud-features">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="hero-style-content wow fadeInUp" data-wow-delay=".2s">
+          <span class="section-tag">Innovation & Product Development</span>
+          <h1 class="section-title">From Vision to Victory</h1>
+          <p class="section-desc">
+            We convert patented ideas and emerging concepts into real-world solutions.
+          </p>
         </div>
       </div>
-      <div class="d-flex gap-3">
-        <div class="w-100">
-          <div class="mud-card wow fadeInUp" data-wow-delay=".1s">
-            <i class="mud-card-icon lni lni-cog"></i>
-            <h3 class="mud-card-title">Extended Patent Seeding Development</h3>
-            <p class="mud-card-desc">
-              From "Art of the Possible" POCs to full-scale implementation.
-            </p>
-          </div>
-        </div>
-        <div class="w-100">
-          <div class="mud-card wow fadeInUp" data-wow-delay=".15s">
-            <i class="mud-card-icon lni lni-code"></i>
-            <h3 class="mud-card-title">AI & IT Services</h3>
-            <p class="mud-card-desc">
-              Covering Gen AI, full-stack development, cloud, big data, and emerging technologies.
-            </p>
-          </div>
-        </div>
+    </div>
+
+    <div class="mud-card-wrapper">
+      <div class="mud-card wow fadeInUp" data-wow-delay=".1s">
+        <i class="mud-card-icon lni lni-cog"></i>
+        <h3 class="mud-card-title">Extended Patent Seeding Development</h3>
+        <p class="mud-card-desc">
+          From "Art of the Possible" POCs to full-scale implementation.
+        </p>
+      </div>
+
+      <div class="mud-card wow fadeInUp" data-wow-delay=".15s">
+        <i class="mud-card-icon lni lni-code"></i>
+        <h3 class="mud-card-title">AI & IT Services</h3>
+        <p class="mud-card-desc">
+          Covering Gen AI, full-stack development, cloud, big data, and emerging technologies.
+        </p>
+      </div>
 
 
   </section>
@@ -1388,10 +1802,11 @@ Incubation of Student-Led Startups</h3>
         <div class="col-xl-4 col-lg-5">
           <div class="ud-contact-form-wrapper wow fadeInUp" data-wow-delay=".2s">
             <h3 class="ud-contact-form-title">Request a Consultation</h3>
-            <form class="ud-contact-form">
+            <form class="ud-contact-form" action="https://api.web3forms.com/submit" method="POST">
+               <input type="hidden" name="access_key" value="dac2c29c-df63-4f86-9efb-925740290f61">
               <div class="ud-form-group">
                 <label for="fullName">Full Name*</label>
-                <input type="text" name="fullName" placeholder="Your Name" />
+                <input type="name" name="fullName" placeholder="Your Name" />
               </div>
               <div class="ud-form-group">
                 <label for="email">Email*</label>
