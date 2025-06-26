@@ -2136,16 +2136,18 @@ document.querySelectorAll('.mobile-link, .mobile-sublink').forEach(link => {
     </div>
     <div class="ud-footer-bottom">
       <div class="container">
-        <div class="row">
-          <div class="col-md-8">
 
-          </div>
-          <div class="d-flex justify-content-end w-100">
-            <p class="footer-policy w-100" style="color: rgba(255, 255, 255, 0.784); width: fit-content;" >
-              Copyright © 2025 ImagineX Innovations. All rights reserved.<br> Bangalore
-            </p>
-          </div>
-        </div>
+
+          <div class="d-flex justify-content-between align-items-center w-100 flex-wrap">
+  <p class=" mobile-left mb-0" style="color: rgba(255, 255, 255, 0.784);">
+    Copyright © 2025 ImagineX Innovations. All rights reserved.
+  </p>
+  <p class=" mobile-right mb-0" style="color: rgba(255, 255, 255, 0.784);">
+    Bangalore
+  </p>
+</div>
+
+
       </div>
     </div>
   </footer>
@@ -2169,14 +2171,23 @@ document.querySelectorAll('.mobile-link, .mobile-sublink').forEach(link => {
 
 
 <style>
-  .footer-policy{
-    text-align: right;
+  .texxt{
+    text-align: center;
   }
+
   .ud-mission {
     position: relative;
     padding: 120px 0;
     background: #ffffff;
     overflow: hidden;
+  }
+  @media (max-width: 500px) {
+    .mobile-left{
+      font-size: 12px !important;
+    }
+        .mobile-right{
+      font-size: 12px !important;
+    }
   }
 
   .ud-section-title {
