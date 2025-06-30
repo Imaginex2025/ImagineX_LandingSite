@@ -334,10 +334,16 @@ header {
   <!-- ====== Header Start ====== -->
 
 
-<header class="main-header py-2 px-3 justify-content-between d-flex align-items-center">
+<header style="height: 90px;" class="main-header   px-3 justify-content-between d-flex align-items-center">
   <!-- Logo -->
 
-    <img src="assets/images/logo/logoo.png" alt="THE ImagineX Logo" height="50px" />
+   <div style="margin-top: 20px;">
+  <img src="assets/images/logo/logoo.png" alt="THE ImagineX Logo" height="50px" />
+  <p style="font-size: 8px; margin-left: 10px; color: black; margin-bottom: 30px; line-height: 0.9;">
+    A Patent Intelligence & Innovation company
+  </p>
+</div>
+
 
 
   <!-- Hamburger Toggle Button -->
@@ -445,7 +451,13 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: relative;
 }
-
+@media (max-width: 576px) {
+  .main-header {
+    padding: 0.75rem 1rem;
+    height: 60px;
+    padding-bottom: 0px;
+  }
+}
 .logo {
   text-decoration: none;
   font-size: 1.5rem;
@@ -997,7 +1009,7 @@ document.querySelectorAll('.mobile-link, .mobile-sublink').forEach(link => {
   <div style="position: relative; z-index: 2; max-width: 900px; margin: auto; text-align: center; padding: 0 20px;">
     
     <h1 style="font-size: 48px; color: #fff; font-weight: 800; margin-bottom: 20px; line-height: 1.2;">Welcome to THE ImagineX</h1>
-    <h5 style="font-size: 12px; color: silver; font-weight: 800; margin-bottom: 20px; line-height: 0.9; ">True Human Enterprise</h5>
+    <h5 style="font-size: 12px; color: silver; font-weight: 800; margin-bottom: 20px; line-height: 0.9; ">True Human Enterprise - a Patent Intelligence & Innovation company</h5>
     
     <p style="font-size: 18px; color: #e0e0e0; margin-bottom: 32px; max-width: 700px; margin-left: auto; margin-right: auto;">
    Empowering innovation through AI-driven patent analytics, strategic IP insights, and future-ready technology solutions.
