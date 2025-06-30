@@ -1287,10 +1287,227 @@ document.querySelectorAll('.mobile-link, .mobile-sublink').forEach(link => {
   </div>
 </section>
   <!-- ====== About End ====== -->
-
+<!-- ====== Highlighted Stats Banner Start ====== -->
+<section id="stats-banner" class="wow fadeIn" data-wow-delay=".2s">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="stats-container">
+          <h2 class="stats-title">The Power of Patents</h2>
+          <p class="stats-subtitle">How industry leaders leverage IP for success</p>
+          <div class="stats-grid">
+            <div class="stat-card wow zoomIn" data-wow-delay=".3s">
+              <i class="fas fa-microchip stat-icon"></i>
+              <h3 class="stat-heading">Qualcomm</h3>
+              <p class="stat-desc">Generates <strong>60–70%</strong> of its profits from patent licensing and royalty fees.</p>
+            </div>
+            <div class="stat-card wow zoomIn" data-wow-delay=".4s">
+              <i class="fas fa-hard-drive stat-icon"></i>
+              <h3 class="stat-heading">ARM Holdings</h3>
+              <p class="stat-desc">Over <strong>90%</strong> of revenue comes from licensing its patented chip architectures.</p>
+            </div>
+            <div class="stat-card wow zoomIn" data-wow-delay=".5s">
+              <i class="fas fa-volume-up stat-icon"></i>
+              <h3 class="stat-heading">Dolby Laboratories</h3>
+              <p class="stat-desc">Earns ~<strong>90%</strong> of revenue from licensing audio and visual technologies.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+</section>
+<!-- ====== Highlighted Stats Banner End ====== -->
   <!-- ====== Training Start ====== -->
 
   <style>
+    /* Stats Banner Styles with Hexagon Shapes and Enhanced Animations */
+#stats-banner {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e6f0fa 100%);
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.stats-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+.stats-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease forwards;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  justify-items: center;
+}
+
+.stat-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 100px;
+  height: 100px;
+  background: #751169;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  opacity: 0.2;
+  transform: rotate(0deg);
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.stat-card:hover::before {
+  transform: rotate(360deg);
+  opacity: 0.4;
+}
+
+.stat-card:hover {
+  transform: scale(1.05) translateY(-10px);
+  box-shadow: 0 12px 24px rgba(117, 17, 105, 0.3);
+  border: 2px solid #751169;
+}
+
+.stat-icon {
+  font-size: 32px;
+  color: #751169;
+  margin-bottom: 12px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.stat-heading {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.stat-desc {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.stat-desc strong {
+  color: #751169;
+  font-weight: 700;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Adjustments for Stats Banner */
+@media (max-width: 768px) {
+  #stats-banner {
+    padding: 40px 15px;
+  }
+  .stats-title {
+    font-size: 28px;
+  }
+  .stats-subtitle {
+    font-size: 16px;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .stat-card {
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  .stats-title {
+    font-size: 24px;
+  }
+  .stats-subtitle {
+    font-size: 14px;
+  }
+  .stat-card {
+    padding: 20px;
+  }
+  .stat-heading {
+    font-size: 20px;
+  }
+  .stat-desc {
+    font-size: 15px;
+  }
+}
     /* Training Section Styles */
 .ud-hero {
   padding: 50px 0;
