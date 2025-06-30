@@ -1485,9 +1485,16 @@ document.querySelectorAll('.mobile-link, .mobile-sublink').forEach(link => {
   }
   .stats-grid {
     grid-template-columns: 1fr;
+    display: flex; /* Ensure cards are always visible */
+    flex-direction: column;
+    gap: 20px;
   }
   .stat-card {
     min-height: 180px;
+    display: flex !important; /* Force display */
+    opacity: 1 !important; /* Force visibility */
+    visibility: visible !important; /* Force visibility */
+    transform: none !important; /* Reset any click-based transforms */
   }
 }
 
@@ -1500,6 +1507,9 @@ document.querySelectorAll('.mobile-link, .mobile-sublink').forEach(link => {
   }
   .stat-card {
     padding: 20px;
+    display: flex !important; /* Force display */
+    opacity: 1 !important; /* Force visibility */
+    visibility: visible !important; /* Force visibility */
   }
   .stat-heading {
     font-size: 20px;
