@@ -337,12 +337,13 @@ header {
 <header style="height: 90px;" class="main-header   px-3 justify-content-between d-flex align-items-center">
   <!-- Logo -->
 
-   <div style="margin-top: 20px;">
+   <div style="margin-top: 20px; font-family: 'Poppins', sans-serif;">
   <img src="assets/images/logo/logoo.png" alt="THE ImagineX Logo" height="50px" />
   <p style="font-size: 9px; margin-left: 6.5px; color: black; margin-bottom: 30px; line-height: 0.9;">
     <b>A Patent Intelligence & Innovation company</b>
   </p>
 </div>
+
 
 
 
@@ -1306,35 +1307,74 @@ document.querySelectorAll('.mobile-link, .mobile-sublink').forEach(link => {
       <div class="col-lg-12">
         <div class="stats-container">
           <h2 class="stats-title">The Power of Patents</h2>
-          <p class="stats-subtitle">How industry leaders leverage IP for success</p>
+          <p class="stats-subtitle">How industry leaders harness IP for long-term success - including but not limited to the below</p>
           <div class="stats-grid">
+            
             <div class="stat-card wow zoomIn" data-wow-delay=".3s">
               <i class="fas fa-microchip stat-icon"></i>
-              <h3 class="stat-heading">Qualcomm</h3>
+              <div class="stat-heading-container">
+                <h3 class="stat-heading">Qualcomm
+                  <a href="https://www.latterly.org/qualcomm-business-model" target="_blank" class="stat-link-icon" title="Go to Qualcomm IP page">
+                    <i class="fas fa-link"></i>
+                  </a>
+                </h3>
+              </div>
               <p class="stat-desc">Generates <strong>60–70%</strong> of its profits from patent licensing and royalty fees.</p>
             </div>
-           
+
             <div class="stat-card wow zoomIn" data-wow-delay=".5s">
               <i class="fas fa-volume-up stat-icon"></i>
-              <h3 class="stat-heading">Dolby Laboratories</h3>
+              <div class="stat-heading-container">
+                <h3 class="stat-heading">Dolby Laboratories
+                  <a href="https://www.sec.gov/Archives/edgar/data/1973239/000197323924000012/arm-20240331.htm" target="_blank" class="stat-link-icon" title="Go to the reports">
+                    <i class="fas fa-link"></i>
+                  </a>
+                </h3>
+              </div>
               <p class="stat-desc">Earns ~<strong>90%</strong> of revenue from licensing audio and visual technologies.</p>
             </div>
-             <div class="stat-card wow zoomIn" data-wow-delay=".4s">
+
+            <div class="stat-card wow zoomIn" data-wow-delay=".4s">
               <i class="fas fa-hard-drive stat-icon"></i>
-              <h3 class="stat-heading">ARM Holdings</h3>
+              <div class="stat-heading-container">
+                <h3 class="stat-heading">ARM Holdings
+                  <a href="https://www.sec.gov/Archives/edgar/data/1308547/000162828025003175/dlb-20241227.htm" target="_blank" class="stat-link-icon" title="Go to the reports">
+                    <i class="fas fa-link"></i>
+                  </a>
+                </h3>
+              </div>
               <p class="stat-desc">Over <strong>90%</strong> of revenue comes from licensing its patented chip architectures.</p>
             </div>
+
           </div>
         </div>
       </div>
     </div>
-</div>
+  </div>
 </section>
+
 <!-- ====== Highlighted Stats Banner End ====== -->
   <!-- ====== Training Start ====== -->
 
   <style>
     /* Stats Banner Styles with Hexagon Shapes and Enhanced Animations */
+    .stat-heading {
+  position: relative;
+  display: inline-block;
+}
+
+.stat-link-icon {
+  font-size: 12px;
+  color:black;
+  margin-left: 6px;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+.stat-link-icon:hover {
+  color: #86a6c8;
+}
+
 #stats-banner {
   background: linear-gradient(135deg, #f8f9fa 0%, #e6f0fa 100%);
   padding: 60px 20px;
